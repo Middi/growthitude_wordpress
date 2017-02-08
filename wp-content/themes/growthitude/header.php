@@ -98,15 +98,9 @@
             <a href="index.html">
                 <h1 class="hidden"><?php bloginfo('name'); ?></h1>
                 <img class="growthitude logo" src="http://www.growthitude.com/images/logo.png" alt="logo"></a>
+
             <nav>
               <?php wp_nav_menu(); ?>
-              <!--  <ul>
-                    <li><a href="index.html" class="active">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#products">products</a></li>
-                    <li><a href="mailto:post@growthitude.com">contact</a></li>
-                </ul>
-              -->
             </nav>
         </div>
     </header>

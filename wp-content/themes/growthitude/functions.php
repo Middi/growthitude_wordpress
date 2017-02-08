@@ -5,6 +5,8 @@ add_theme_support( 'post-thumbnails' );
 // Enable Menus
 add_theme_support( 'menus' );
 
+// Enable Custom logo
+add_theme_support( 'custom-logo' );
 
 //create a permalink after the excerpt
 function wpfme_replace_excerpt($content) {

@@ -156,7 +156,7 @@ nav ul li {
   width: 130px;
   height: 158px;
   top: 515px;
-  background: url("../images/book.png") no-repeat;
+  background: url("../../../wp-content/uploads/2017/02/book.png") no-repeat;
   background-size: contain;
   z-index: 100;
 }
@@ -191,7 +191,7 @@ form {
 }
 
 .tonje-img {
-  background: url("../images/tonje3.jpg") center top no-repeat;
+  background: url("../../../wp-content/uploads/2017/02/tonje3.jpg") center top no-repeat;
   background-size: cover;
   height: 600px;
   padding: 0;
@@ -298,8 +298,8 @@ form {
 }
 
 .prodnail-hidden {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/advisor.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/advisor.jpg") left top no-repeat;
+  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
   background-size: cover;
   width: 100%;
   height: 350px;
@@ -310,32 +310,32 @@ form {
 }
 
 .prodnail1 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/advisor.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/advisor.jpg") left top no-repeat;
+  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
   background-size: cover;
 }
 
 .prodnail2 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/business.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/business.jpg") left top no-repeat;
+  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/business.jpg") left top no-repeat;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/business.jpg") left top no-repeat;
   background-size: cover;
 }
 
 .prodnail3 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/uncover.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/uncover.jpg") left top no-repeat;
+  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/uncover.jpg") left top no-repeat;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/uncover.jpg") left top no-repeat;
   background-size: cover;
 }
 
 .prodnail4 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/culture.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/culture.jpg") left top no-repeat;
+  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/culture.jpg") left top no-repeat;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/culture.jpg") left top no-repeat;
   background-size: cover;
 }
 
 .blognail2 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/lindsey.jpg") center top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../images/lindsey.jpg") center top no-repeat;
+  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/lindsey.jpg") center top no-repeat;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/lindsey.jpg") center top no-repeat;
   background-size: cover;
 }
 
@@ -416,8 +416,8 @@ form {
 }
 
 #shrink {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/prod-img.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/prod-img.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../wp-content/uploads/2017/02/prod-img.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../wp-content/uploads/2017/02/prod-img.jpg");
   background-position: center top no-repeat;
   background-size: cover;
   width: 100%;
@@ -656,7 +656,7 @@ audio {
   }
   .tonje-img {
     display: block;
-    background: url("../images/tonje3.jpg") center top no-repeat;
+    background: url("../../../wp-content/uploads/2017/02/tonje3.jpg") center top no-repeat;
     background-size: contain;
     height: 350px;
     width: auto;

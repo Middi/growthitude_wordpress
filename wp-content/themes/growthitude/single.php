@@ -18,7 +18,7 @@ if ( has_post_thumbnail() ) { the_post_thumbnail_url();
     <p class="black"><?php the_content(); ?></p>
 
     <center>
-        <a href="http://alpha.growthitude.com/blog/" type="button" role="button" class="btn btn-primary">More Blogs</a>
+        <a href="growthitude_wordpress/blogs/" type="button" role="button" class="btn btn-primary">More Blogs</a>
     </center>
 </div>
 
