@@ -7,7 +7,9 @@
       <div class="hero-content">
           <h1>We've got your back</h1>
 
-          <p>All industries are being disrupted by the development of technology and automatisation of work tasks. To stay competitive and attract and retain clients it is essential to continuously develop your skills as a professional. We can help you.</p>
+
+
+          <p><?php bloginfo( 'description' ); ?></p>
 
           <a href="#about" role="button" class="btn btn-success btn-lg">Read More</a>
       </div>
@@ -179,43 +181,24 @@ Did you know how much you can improve performance, increase productivity and sav
 
           <div class="row">
 
-<?php while(have_posts()) : the_post(); ?>
+<?php global $query_string;
+        query_posts ('posts_per_page=3');
+
+        while(have_posts()) : the_post(); ?>
 
               <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="blognail1" <?php
 
 if ( $id = get_post_thumbnail_id() ) {
     if ( $src = wp_get_attachment_url( $id ) )
-        printf( ' style="background-image: url(%s);"', $src );
+        printf( ' style="background:   -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url(%s) center top no-repeat;
+        background-size: cover;"', $src );
 }
 
 ?>>
 <div class="title" id="target">
-                      <a href="regan.html"><span class="highlight"><?php the_title(); ?></span></a>
-                        <?php the_content('Read More'); ?>
-
-
-                    </div>
-                </div>
-              </div>
-
-
-              <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="blognail2">
-<div class="title" id="target">
-                      <a href="lindsey.html"><span class="highlight">Our podcast with Lindsey Agness</span></a>
-                        <p>Lindsey spent 11years as a change management consultant & behavioural  specialist before setting up The Change Corporation.</p>
-
-
-                    </div>
-                </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="blognail3">
-<div class="title" id="target">
-                      <a href="julie.html"><span class="highlight">Our podcast with Julie Hodges</span></a>
-                        <p>Julie have worked extensively in the academic and business world in the field of organisational change and transformation. </p>
+                      <a href="<?php the_permalink(); ?>"><span class="highlight"><?php the_title(); ?></span></a>
+                        <?php the_excerpt('Read More'); ?>
 
 
                     </div>
