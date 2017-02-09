@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -95,7 +95,7 @@
 
     <header>
         <div class="inner-header">
-            <a href="index.html">
+            <a href="/growthitude_wordpress/home">
                 <h1 class="hidden"><?php bloginfo('name'); ?></h1>
                 <img class="growthitude logo" src="http://www.growthitude.com/images/logo.png" alt="logo"></a>
 

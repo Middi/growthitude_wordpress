@@ -21,7 +21,7 @@
     <img class="img img-responsive center-block" src="<?php
 if ( has_post_thumbnail() ) { the_post_thumbnail_url();
 }
-?>" alt="...">
+?>" alt="Product image">
 
     <br><br><br>
 

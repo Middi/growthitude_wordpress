@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://community.1and1.com/xmlrpc.php">
+
+	<link rel="shortcut icon" href="https://community.1and1.com/wp-content/themes/1and1/images/favicon.ico">
+	<link rel="apple-touch-icon" href="https://community.1and1.com/wp-content/themes/1and1/images/apple-touch-icon-57x57px.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://community.1and1.com/wp-content/themes/1and1/images/apple-touch-icon-72x72px.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://community.1and1.com/wp-content/themes/1and1/images/apple-touch-icon-114x114px.png">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://community.1and1.com/wp-content/themes/1and1/js/html5shiv.js" defer></script>
+		<script src="https://community.1and1.com/wp-content/themes/1and1/js/respond.min.js" defer></script>
+	<![endif]-->
+
+	<title>Move WordPress website to a new provider/host - 1&amp;1 Community</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v3.2.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Learn how to move WordPress websites to a new provider in 3 easy steps: 1.Export website 2. Transfer WordPress website 3.Database adjustments, optimization"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Move WordPress website to a new provider/host - 1&amp;1 Community" />
+<meta property="og:description" content="Learn how to move WordPress websites to a new provider in 3 easy steps: 1.Export website 2. Transfer WordPress website 3.Database adjustments, optimization" />
+<meta property="og:url" content="https://community.1and1.com/moving-your-wordpress-website-to-1and1/" />
+<meta property="og:site_name" content="1&amp;1 Community" />
+<meta property="article:tag" content="1and1" />
+<meta property="article:tag" content="Advanced" />
+<meta property="article:tag" content="Beginner" />
+<meta property="article:tag" content="Content" />
+<meta property="article:tag" content="Export" />
+<meta property="article:tag" content="FTP" />
+<meta property="article:tag" content="Getting Started" />
+<meta property="article:tag" content="Import" />
+<meta property="article:tag" content="Migration" />
+<meta property="article:tag" content="Move Wordpress" />
+<meta property="article:tag" content="MySQL" />
+<meta property="article:tag" content="Transfer Wordpress" />
+<meta property="article:tag" content="WordPress" />
+<meta property="article:section" content="How-To" />
+<meta property="article:published_time" content="2016-03-23T08:30:36+01:00" />
+<meta property="article:modified_time" content="2016-05-18T16:03:08+01:00" />
+<meta property="og:updated_time" content="2016-05-18T16:03:08+01:00" />
+<meta property="og:image" content="https://community.1and1.com/wp-content/uploads/2015/04/Migrating-WordPress-to-11.001.jpg" />
+<meta property="og:image" content="https://community.1and1.com/wp-content/uploads/2014/12/cp-hosting-manage-webspace-widget.png" />
+<meta property="og:image" content="https://community.1and1.com/wp-content/uploads/2015/04/100_new_subdomain_check-1.png" />
+<meta property="og:image" content="https://community.1and1.com/wp-content/uploads/2015/04/menu_select_destination-1.png" />
+<meta property="og:image" content="https://community.1and1.com/wp-content/uploads/2015/04/destination_webspace-1.png" />
+<meta property="og:image" content="https://community.1and1.com/wp-content/uploads/2015/04/webspace_selectFolder-1.png" />
+<meta property="og:image" content="https://community.1and1.com/wp-content/uploads/2014/05/1und1_logo1.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Learn how to move WordPress websites to a new provider in 3 easy steps: 1.Export website 2. Transfer WordPress website 3.Database adjustments, optimization" />
+<meta name="twitter:title" content="Move WordPress website to a new provider/host - 1&amp;1 Community" />
+<meta name="twitter:image" content="https://community.1and1.com/wp-content/uploads/2015/04/Migrating-WordPress-to-11.001.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="1&amp;1 Community &raquo; Feed" href="https://community.1and1.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="1&amp;1 Community &raquo; Comments Feed" href="https://community.1and1.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="1&amp;1 Community &raquo; Move WordPress website to a new provider/host Comments Feed" href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/community.1and1.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.4"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='bootstrap-css'  href='https://community.1and1.com/wp-content/themes/1and1/css/bootstrap.min.css?ver=3.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='1and1-shared-css'  href='https://community.1and1.com/wp-content/plugins/1and1-shared/css/shared.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='https://community.1and1.com/wp-content/themes/1and1/css/main.css?ver=1.1.0' type='text/css' media='all' />
+<style id='main-inline-css' type='text/css'>
+.list-group-item-icon-284 {
+						background: #5faf4f;
+						}.category-list-icon-284 {
+						background-color: #5faf4f;
+						}.smart-card-category-icon-284 {
+						background: #5faf4f;
+						}.header-card-image-overlay.cat-284 {
+						background: -moz-linear-gradient(270deg, rgba(95,175,79,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(95,175,79,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(95,175,79,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(95,175,79,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(95,175,79,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(95,175,79,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-289 {
+						background: #ffc728;
+						}.category-list-icon-289 {
+						background-color: #ffc728;
+						}.smart-card-category-icon-289 {
+						background: #ffc728;
+						}.header-card-image-overlay.cat-289 {
+						background: -moz-linear-gradient(270deg, rgba(255,199,40,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,199,40,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(255,199,40,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(255,199,40,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(255,199,40,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(255,199,40,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-291 {
+						background: #50a9e5;
+						}.category-list-icon-291 {
+						background-color: #50a9e5;
+						}.smart-card-category-icon-291 {
+						background: #50a9e5;
+						}.header-card-image-overlay.cat-291 {
+						background: -moz-linear-gradient(270deg, rgba(80,169,229,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(80,169,229,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(80,169,229,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(80,169,229,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(80,169,229,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(80,169,229,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-288 {
+						background: ;
+						}.category-list-icon-288 {
+						background-color: ;
+						}.smart-card-category-icon-288 {
+						background: ;
+						}.header-card-image-overlay.cat-288 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-302 {
+						background: ;
+						}.category-list-icon-302 {
+						background-color: ;
+						}.smart-card-category-icon-302 {
+						background: ;
+						}.header-card-image-overlay.cat-302 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-1406 {
+						background: ;
+						}.category-list-icon-1406 {
+						background-color: ;
+						}.smart-card-category-icon-1406 {
+						background: ;
+						}.header-card-image-overlay.cat-1406 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-1414 {
+						background: ;
+						}.category-list-icon-1414 {
+						background-color: ;
+						}.smart-card-category-icon-1414 {
+						background: ;
+						}.header-card-image-overlay.cat-1414 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-300 {
+						background: ;
+						}.category-list-icon-300 {
+						background-color: ;
+						}.smart-card-category-icon-300 {
+						background: ;
+						}.header-card-image-overlay.cat-300 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-303 {
+						background: ;
+						}.category-list-icon-303 {
+						background-color: ;
+						}.smart-card-category-icon-303 {
+						background: ;
+						}.header-card-image-overlay.cat-303 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-294 {
+						background: ;
+						}.category-list-icon-294 {
+						background-color: ;
+						}.smart-card-category-icon-294 {
+						background: ;
+						}.header-card-image-overlay.cat-294 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-295 {
+						background: ;
+						}.category-list-icon-295 {
+						background-color: ;
+						}.smart-card-category-icon-295 {
+						background: ;
+						}.header-card-image-overlay.cat-295 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-299 {
+						background: ;
+						}.category-list-icon-299 {
+						background-color: ;
+						}.smart-card-category-icon-299 {
+						background: ;
+						}.header-card-image-overlay.cat-299 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-301 {
+						background: ;
+						}.category-list-icon-301 {
+						background-color: ;
+						}.smart-card-category-icon-301 {
+						background: ;
+						}.header-card-image-overlay.cat-301 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-304 {
+						background: ;
+						}.category-list-icon-304 {
+						background-color: ;
+						}.smart-card-category-icon-304 {
+						background: ;
+						}.header-card-image-overlay.cat-304 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-287 {
+						background: ;
+						}.category-list-icon-287 {
+						background-color: ;
+						}.smart-card-category-icon-287 {
+						background: ;
+						}.header-card-image-overlay.cat-287 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-2381 {
+						background: #1e73be;
+						}.category-list-icon-2381 {
+						background-color: #1e73be;
+						}.smart-card-category-icon-2381 {
+						background: #1e73be;
+						}.header-card-image-overlay.cat-2381 {
+						background: -moz-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30,115,190,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-2392 {
+						background: #1e73be;
+						}.category-list-icon-2392 {
+						background-color: #1e73be;
+						}.smart-card-category-icon-2392 {
+						background: #1e73be;
+						}.header-card-image-overlay.cat-2392 {
+						background: -moz-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30,115,190,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-2472 {
+						background: #1e73be;
+						}.category-list-icon-2472 {
+						background-color: #1e73be;
+						}.smart-card-category-icon-2472 {
+						background: #1e73be;
+						}.header-card-image-overlay.cat-2472 {
+						background: -moz-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30,115,190,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(30,115,190,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}.list-group-item-icon-2475 {
+						background: ;
+						}.category-list-icon-2475 {
+						background-color: ;
+						}.smart-card-category-icon-2475 {
+						background: ;
+						}.header-card-image-overlay.cat-2475 {
+						background: -moz-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ff3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0.6)), color-stop(50%, rgba(255,255,255,0))); /* safari4+,chrome */
+						background: -webkit-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* safari5.1+,chrome10+ */
+						background: -o-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* opera 11.10+ */
+						background: -ms-linear-gradient(270deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* ie10+ */
+						background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 50%); /* w3c */
+						}
+</style>
+<script type='text/javascript' src='https://community.1and1.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://community.1and1.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://community.1and1.com/wp-content/plugins/1and1-shared/js/menu.js?ver=1.1.0'></script>
+<link rel='https://api.w.org/' href='https://community.1and1.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://community.1and1.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://community.1and1.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://community.1and1.com/?p=1329' />
+<link rel="alternate" type="application/json+oembed" href="https://community.1and1.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcommunity.1and1.com%2Fmoving-your-wordpress-website-to-1and1%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://community.1and1.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcommunity.1and1.com%2Fmoving-your-wordpress-website-to-1and1%2F&#038;format=xml" />
+<link rel='https://github.com/WP-API/WP-API' href='https://community.1and1.com/api' />
+		<!--Customizer CSS--> 
+		<style type="text/css">
+						h1, h2, h3,
+				.list-group .list-group-item h2 {
+					font-family: 'Open Sans', Arial;
+					font-weight: 400;
+					color: #004192;
+				}
+				.btn-primary,
+				.btn-secondary,
+				.oneandone-site-header .category,
+				.main-navigation-wrapper .main-navigation a {
+					font-family: 'Open Sans', Arial;
+					font-weight: 400;
+				}
+								.btn-primary, .btn-secondary {
+					background: #0F95FC;
+					border-radius: 4px;
+					color: #FFF;
+					font-family: 'Open Sans', Arial, sans-serif;
+					font-weight: 600;
+					padding: 7px 24px;
+					margin-left: 2px;
+				}
+				.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+				.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+					background: #0E87E3;
+					color: #FFF;
+				}
+				.btn-primary:focus, .btn-primary:active, .btn:active:focus,
+				.btn-secondary:focus, .btn-secondary:active {
+					box-shadow: none;
+				}
+				.btn-primary:after,
+				.btn-secondary:after {
+					display: none;
+				}
+				.btn-secondary {
+					background: #FFF;
+					padding: 6px 23px;
+					color: #0F95FC;
+					border: 1px solid #0F95FC;
+				}
+				.btn-secondary:hover {
+					background: #F0F0F0;
+					color: #0F95FC;
+				}
+								.search-form .input-group .form-control {
+					border-radius: 4px;
+				}
+				.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+					margin-left: 2px;
+					border-radius: 4px;
+				}
+								body {
+					background: #FFFFFF;
+				}
+								/* if the layout is appied permanently, remove bootstrap classes from widget header */
+				.widget .widget-title,
+				.widget .widget-title.decoration-gradient-a2, 
+				.widget .widget-title.decoration-gradient-a2:before, 
+				.widget .widget-title.decoration-gradient-a2:after {
+					background: none;
+					color: #003D8F;
+					margin-bottom: 15px;
+				}
+				.widget .widget-title.transformation-skew-c2 {
+					margin-top: 10px;
+				}
+				.widget-inner {
+					background: none;
+					border: none;
+					border-radius: 0;
+					border-top: 1px solid #EBEBEB;
+					padding: 20px 0;
+					margin: 0 20px;
+				}
+				.widget {
+					background: #FFFFFF;
+					border: 1px solid #EBEBEB;
+					border-radius: 4px;
+				}
+				.widget .widget-title .glyphicon {
+					right: 20px;
+				}
+									
+																		body, .btn, .form-control {
+					font-size: 15px;
+					line-height: 1.4em;
+				}
+				
+				@media screen and (max-width: 768px) {
+					body, .btn, .form-control {
+						font-size: 13px;
+					}
+				}
+				</style> 
+		<!--/Customizer CSS-->
+				<script type="text/javascript">
+		var ajaxUrl = 'https://community.1and1.com/wp-admin/admin-ajax.php';
+		var ajaxNonce = '2715337359';
+		</script>
+		</head>
+
+<body class="single single-post postid-1329 single-format-standard header-fixed">
+
+	<header class="site-header" role="banner">
+
+		
+		<div class="main-navigation-wrapper container">
+			<nav class="navigation menu-primary small"><a href="https://community.1and1.com" class="oneandone-logo"><img src="https://community.1and1.com/wp-content/plugins/1and1-shared/images/logo-navigation.gif" alt="1&amp;1" width="36" height="36"></a><ul id="menu-main-menu" class="main-navigation"><li id="menu-item-574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-574 col-sm-2 col-xs-6"><a href="https://community.1and1.com?cat" class="icon-star">Start</a></li>
+<li id="menu-item-6449" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-6449 col-sm-2 col-xs-6"><a title="WordPress" href="https://community.1and1.com/category/wordpress/?cat" class="icon-star">WordPress</a></li>
+<li id="menu-item-6450" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6450 col-sm-2 col-xs-6"><a title="Joomla!" href="https://community.1and1.com/category/joomla/?cat" class="icon-star">Joomla!</a></li>
+<li id="menu-item-302" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-302 col-sm-2 col-xs-6"><a href="https://community.1and1.com/category/community/?cat" class="icon-star">Community</a></li>
+<li id="menu-item-329" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-329 col-sm-2 col-xs-6"><a href="https://community.1and1.com/category/how-to/?cat" class="icon-star">How-To</a></li>
+<li id="menu-item-330" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-330 col-sm-2 col-xs-6"><a href="https://community.1and1.com/category/information/?cat" class="icon-star">Information</a></li>
+</ul></nav>		</div>
+
+			    
+		
+	</header>
+
+	<div class="content-container container">
+	<div id="content" class="clearfix">
+		<div class="row">
+
+			<div id="main" role="main" class="col-lg-9 col-md-8">
+
+				
+			<article id="post-1329" class="post-1329 post type-post status-publish format-standard hentry category-how-to category-wordpress tag-1and1 tag-advanced tag-beginner tag-content tag-export tag-ftp tag-getting-started tag-import tag-migration tag-move-wordpress tag-mysql tag-transfer-wordpress tag-wordpress">
+
+				
+				<div class="post-inner">
+					<aside class="col-md-offset-2 clearfix">
+									<div class="table-of-contents-dropdown">
+				<span class="dropdown-button">
+					<span class="glyphicon glyphicon-th-list"></span>
+					Content				</span>
+				<ul>
+										<li><a href="#prerequisites" title="Prerequisites">Prerequisites</a></li>
+										<li><a href="#downloading-existing-page-from-the-other-webhosting-provider" title="Downloading Existing Page from the Other Webhosting Provider">Downloading Existing Page from the Other Webhosting Provider</a></li>
+										<li><a href="#exporting-mysql-database" title="Exporting MySQL Database">Exporting MySQL Database</a></li>
+										<li><a href="#downloading-wordpress-files" title="Downloading WordPress Files">Downloading WordPress Files</a></li>
+										<li><a href="#setting-up-a-new-web-hosting-account-at-11" title="Setting up a New Web Hosting Account at 1&1">Setting up a New Web Hosting Account at 1&1</a></li>
+										<li><a href="#creating-an-ftp-user" title="Creating an FTP User">Creating an FTP User</a></li>
+										<li><a href="#create-a-mysql-database" title="Create a MySQL database">Create a MySQL database</a></li>
+										<li><a href="#preparing-wordpress-files-wp-config-php" title="Preparing WordPress Files (wp-config.php)">Preparing WordPress Files (wp-config.php)</a></li>
+										<li><a href="#uploading-wordpress-files-with-sftp-or-ftps" title="Uploading WordPress Files with SFTP or FTPS">Uploading WordPress Files with SFTP or FTPS</a></li>
+										<li><a href="#importing-database" title="Importing Database">Importing Database</a></li>
+										<li><a href="#adjusting-dns-settings-connecting-domain-with-wordpress-website" title="Adjusting DNS Settings (Connecting Domain with WordPress Website)">Adjusting DNS Settings (Connecting Domain with WordPress Website)</a></li>
+										<li><a href="#optional-fixing-broken-links-when-switching-to-a-new-domain-or-coming-from-a-local-installation" title="Optional: Fixing Broken Links When Switching to a New Domain (or Coming From a Local Installation)">Optional: Fixing Broken Links When Switching to a New Domain (or Coming From a Local Installation)</a></li>
+									</ul>
+			</div>
+									
+						<p><ul class="social-buttons"><li><a rel="nofollow" class="share-twitter btn btn-default btn-xs share-button" href="https://twitter.com/share" title="Click to share on Twitter"><span>Tweet</span></a></li><li><a rel="nofollow" class="share-facebook btn btn-default btn-xs share-button" href="https://www.facebook.com/sharer/sharer.php" title="Share on Facebook"><span>Share</span></a></li><li><a rel="nofollow" class="share-google-plus btn btn-default btn-xs share-button" href="https://plus.google.com/share" title="Click to share on Google+"><span>Share</span></a></li></ul></p>					</aside>
+
+					<header class="entry-header">
+						<h1 class="entry-title col-md-10" itemprop="headline">
+							Move WordPress website to a new provider/host						</h1>
+
+						<div class="entry-meta col-md-2">
+							<div class="entry-meta-inside">
+								<div class="entry-info"><h2>Info</h2></div>
+
+								<div class="entry-author author vcard"><h3>Author</h3> <a class="url fn n" href="https://community.1and1.com/author/philipp/" title="View all posts by Philipp Bellmann" rel="author">Philipp Bellmann</a></div>
+																<div class="entry-category"><h3>Category</h3> <ul class="post-categories">
+	<li><a href="https://community.1and1.com/category/how-to/" title="View all posts in How-To" rel="category tag">How-To</a></li>
+	<li><a href="https://community.1and1.com/category/wordpress/" title="View all posts in WordPress" rel="category tag">WordPress</a></li></ul></div>
+								
+								
+								<div class="entry-date"><h3>Date</h3> <time class="entry-date" datetime="2016-03-23T08:30:36+00:00">March 23, 2016</time></div>
+															</div>
+						</div>
+					</header>
+
+					<div class="entry-content col-md-10">
+						<p>You can move WordPress websites from another provider to 1&amp;1. Your themes, plugins, posts, comments, categories and keywords will be transfered entirely. We recommend you to keep your domain. You can also transfer your domain to 1&amp;1 and benefit from the many free domains included in many of our packages.</p>
+<p><strong>This post describes the transfer of a self maintained WordPress, when keeping the domain.</strong></p>
+<hr>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This is what you need for the transfer:</p>
+<ul>
+<li>FTP access to your existing page</li>
+<li>phpMyAdmin access to your existing MySQL database</li>
+<li>Access to the DNS settings for your domain names</li>
+<li>A 1&amp;1 Web Hosting package</li>
+<li>Optional: a reasonably sized cup of coffee and your favorite cookies</li>
+</ul>
+<p>The transfer is simple, but it requires some time. Therefore, plan about 30-45 minutes and choose the right moment for the transfer.</p>
+<p>Three phases for your WordPress transfer to 1&amp;1:</p>
+<ol>
+<li>Database export and WordPress backup on your previous hosting providers side</li>
+<li>Preparation and installation on 1&amp;1 side</li>
+<li>Database import and adjustments on 1&amp;1 side</li>
+</ol>
+<h2 id="downloading-existing-page-from-the-other-webhosting-provider"><img class="aligncenter wp-image-5794 size-full" src="https://community.1and1.com/wp-content/uploads/2015/04/Migrating-WordPress-to-11.001.jpg" alt="Move WordPress - Steps" width="1920" height="798" srcset="https://community.1and1.com/wp-content/uploads/2015/04/Migrating-WordPress-to-11.001.jpg 1920w, https://community.1and1.com/wp-content/uploads/2015/04/Migrating-WordPress-to-11.001-300x125.jpg 300w, https://community.1and1.com/wp-content/uploads/2015/04/Migrating-WordPress-to-11.001-1024x426.jpg 1024w" sizes="(max-width: 1920px) 100vw, 1920px" />Downloading Existing Page from the Other Webhosting Provider</h2>
+<p>Learn here how to export your existing WordPress database and how to download the WordPress files from another web hosting provider.</p>
+<h3 id="exporting-mysql-database">Exporting MySQL Database</h3>
+<ol>
+<li>Log into your previous hosting provider account and open phpMyAdmin.</li>
+<li>Create an MySQL export of the <strong>database</strong> that you use for your WordPress installation.</li>
+<li>This is how to export your database with phpMyAdmin:
+<ol>
+<li>In the left column, click the database you want to export. The database structure overview will be displayed.</li>
+<li>Click <strong>Export</strong>.</li>
+<li>Select the option <strong>Quick &#8211; display only the minimal options</strong>.</li>
+<li>Select the <strong>SQL</strong> <strong>format</strong></li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+</li>
+<li>Save the exported MySQL database on your computer.</li>
+</ol>
+<p>Learn more:</p>
+<p>If the option <strong>Quick &#8211; display only the minimal options </strong>is not available in the phpMyAdmin version that you use, you find more information on exporting in the <a href="http://codex.wordpress.org/Backing_Up_Your_Database" target="_blank">WordPress Codex</a>, the <a href="http://help.1and1.com/hosting-c37630/databases-c85147/mysql-database-c37730/backup-a-mysql-database-using-phpmyadmin-a704534.html" target="_blank">1&amp;1 Help Center</a> or on the help pages of your previous hosting provider.</p>
+<h3 id="downloading-wordpress-files">Downloading WordPress Files</h3>
+<ol>
+<li>Connect to your existing webspace using SFTP (Linux Hosting) or FTPS (Windows Hosting) at your previous hosting provider.<br />
+As an FTP customer you can use <a href="https://filezilla-project.org/download.php?show_all=1" target="_blank">FileZilla</a> for example. The FTP settings and information on creating a FTP user are available in the customer area of your previous provider.</li>
+<li>Install and start <a href="https://filezilla-project.org/download.php?show_all=1" target="_blank">FileZilla</a>.</li>
+<li>Copy your WordPress files on your computer.
+<ol>
+<li>Copy all WordPress main folders: wp-admin, wp-content and wp-includes.</li>
+<li>In the WordPress <em>Root </em>directory, copy all files that include <strong>wp-</strong> in the file name.</li>
+<li>If you are not sure, you can simply copy the whole WordPress Root directory. In the worst case, you copy some file you do not need&hellip;</li>
+</ol>
+</li>
+</ol>
+<h2 id="setting-up-a-new-web-hosting-account-at-11">Setting up a New Web Hosting Account at 1&amp;1</h2>
+<p>To import your WordPress website, you need a webspace and a database at 1&amp;1.</p>
+<h3 id="creating-an-ftp-user">Creating an FTP User</h3>
+<p>Open the<a href="https://my.1and1.com/WebspaceInfrastructure" target="_blank"> Hosting</a> section in the 1&amp;1 Control Panel.<br />
+Here you can create an FTP user and manage your MySQL databases.</p>
+<a href="https://my.1and1.com/WebspaceInfrastructure" target="_blank"><img class="aligncenter wp-image-2150 size-full" src="https://community.1and1.com/wp-content/uploads/2014/12/cp-hosting-manage-webspace-widget.png" alt="Transfer WordPress - Set up new host" width="1052" height="579" srcset="https://community.1and1.com/wp-content/uploads/2014/12/cp-hosting-manage-webspace-widget.png 1052w, https://community.1and1.com/wp-content/uploads/2014/12/cp-hosting-manage-webspace-widget-300x165.png 300w, https://community.1and1.com/wp-content/uploads/2014/12/cp-hosting-manage-webspace-widget-1024x563.png 1024w" sizes="(max-width: 1052px) 100vw, 1052px" /></a>
+<ol>
+<li>Click <strong>Secure FTP Account </strong>under <strong>Manage webspace</strong>.</li>
+<li>Click <strong>New User.</strong></li>
+<li>Enter<strong> a user name </strong>and<strong> a password </strong>and optionally, a <strong>description.</strong></li>
+<li>Select the <strong>directory</strong> this user can access.<br />
+The user can create, edit and delete files and folders in this directory.</li>
+<li>Write down the <strong>user name</strong> and <strong>password.</strong><br />
+You need this information right away to upload your WordPress files to the 1&amp;1 server using FileZilla.</li>
+<li><strong>Save</strong> the new user.</li>
+</ol>
+<h3 id="create-a-mysql-database">Create a MySQL database</h3>
+<ol>
+<li>Click <strong>MySQL Database </strong>from <strong>Manage webspace</strong>.</li>
+<li>Click <strong>New Database</strong>.</li>
+<li>Set a password for the database.</li>
+<li>Click <strong>Set Up</strong>.</li>
+<li>Click <strong>Go to Overview</strong> and note down the <strong>database name</strong>, the h<strong>ost name</strong>, the database <strong>user name</strong> and the <strong>password</strong>.</li>
+</ol>
+<h3 id="preparing-wordpress-files-wp-config-php">Preparing WordPress Files (wp-config.php)</h3>
+<p>In this step you adjust the database settings of the WordPress files you have downloaded on your computer.</p>
+<ol>
+<li>In the <em>Root</em> directory, open the <strong>wp-config.php </strong>file with a text editor, such as Notepad or Notepad++.</li>
+<li>Adjust the following entries:
+<pre>/** The name of the database for WordPress */
+define('DB_NAME', <em>'</em><strong>1&amp;1databasename'</strong>);</pre>
+<pre>/** MySQL database username */
+define('DB_USER', <em>'</em><strong>1&amp;1username'</strong>);</pre>
+<pre>/** MySQL database password */
+define('DB_PASSWORD', <em>'</em><strong>1&amp;1password</strong><em>'</em>);</pre>
+<pre>/** MySQL hostname */
+define('DB_HOST', <em>'</em><strong>1&amp;1hostname'</strong>);</pre>
+</li>
+</ol>
+<p>Use the <strong>database name</strong>, the database <strong>user name</strong>, the <strong>password a</strong>nd<strong> the</strong> <strong>host name, </strong>that you set for your MySQL database at 1&amp;1. <strong>Save</strong> the wp-config.php file.</p>
+<h2 id="uploading-wordpress-files-with-sftp-or-ftps">Uploading WordPress Files with SFTP or FTPS</h2>
+<ol>
+<li>Start <a href="https://filezilla-project.org/download.php?show_all=1" target="_blank">FileZilla</a>.</li>
+<li>Select <strong>File</strong> &gt; <strong>Site Manager </strong>from the menu.</li>
+<li>Click <strong>New Site</strong> and enter the following information:
+<ol>
+<li><strong>Host</strong>: your domain or subdomain</li>
+<li><strong>Port</strong>: 22 (SFTP) or 21 (FTPS)</li>
+<li><strong>Protocol</strong>: SFTP or FTPS &ndash; <strong>Encryption</strong>: Require explicit FTP over TLS</li>
+<li><strong>User </strong>and <strong>password</strong>: use the FTP user name and the corresponding password you have just created.</li>
+</ol>
+</li>
+<li>Click <strong>Connect</strong>.</li>
+<li>Upload a copy of all WordPress files and folders to the <em>Root</em> directory.</li>
+</ol>
+<h2 id="importing-database">Importing Database</h2>
+<p>To complete the transfer you now have to import the MySQL database.</p>
+<ol>
+<li>Open the <a href="https://mein.1und1.de/Whttps://www.1and1.com/login?__lf=Static&amp;linkId=hd.nav.loginebspaceInfrastructure" target="_blank">Hosting</a> section in the 1&amp;1 Control Panel.</li>
+<li>Click <strong>MySQL Database </strong>from <strong>Manage webspace.</strong></li>
+<li>Select <strong>phpMyAdmin</strong> next to the database you have just created for your WordPress website.</li>
+<li>To import your database with phpMyAdmin:
+<ol>
+<li>Select the database you want to import your MySQL Database to.</li>
+<li>Click <strong>Import </strong>in the top menu.</li>
+<li>Under <strong>File to Import</strong> click <strong>Browse</strong>.</li>
+<li>Select the database you have just exported and click <strong>Open.</strong></li>
+<li>Select <strong>Compression</strong>: Autom. detection and <strong>Character set of the file</strong>: utf8.</li>
+<li>Click <strong>Go</strong>.</li>
+</ol>
+</li>
+</ol>
+<p>The database import is completed.</p>
+<h2 id="adjusting-dns-settings-connecting-domain-with-wordpress-website">Adjusting DNS Settings (Connecting Domain with WordPress Website)</h2>
+<p>To make your website available under your domain on the Internet, you have to connect the domain to the website. Your website data is in your webspace.</p>
+<p>Prerequisites:</p>
+<ul>
+<li>The domain has already been transfered to 1&amp;1.</li>
+<li>The domain has the status Active.</li>
+<li>The domain must not be used by another application, such as 1&amp;1 E-mail or 1&amp;1 WebsiteBuilder.</li>
+</ul>
+<ol>
+<li>Open the <strong>1&amp;1 Domain Center </strong>in the <a href="https://www.1and1.com/login?__lf=Static&amp;linkId=hd.nav.login" target="_blank">1&amp;1 Control-Panel</a>.</li>
+<li>Activate a domain in the Domain Overview.<br />
+<img class="aligncenter size-full wp-image-5790" src="https://community.1and1.com/wp-content/uploads/2015/04/100_new_subdomain_check-1.png" alt="100_new_subdomain_check (1)" width="960" height="282" srcset="https://community.1and1.com/wp-content/uploads/2015/04/100_new_subdomain_check-1.png 960w, https://community.1and1.com/wp-content/uploads/2015/04/100_new_subdomain_check-1-300x88.png 300w" sizes="(max-width: 960px) 100vw, 960px" /></li>
+<li>In the toolbar, click <strong>Domain Settings</strong> &gt; <strong>Edit Destination</strong>.<br />
+<img class="aligncenter size-full wp-image-5789" src="https://community.1and1.com/wp-content/uploads/2015/04/menu_select_destination-1.png" alt="menu_select_destination (1)" width="238" height="189"></li>
+<li>Click <strong>Webspace </strong>in the <strong>Destination </strong>section.<br />
+<img class="aligncenter size-full wp-image-5788" src="https://community.1and1.com/wp-content/uploads/2015/04/destination_webspace-1.png" alt="destination_webspace (1)" width="958" height="197" srcset="https://community.1and1.com/wp-content/uploads/2015/04/destination_webspace-1.png 958w, https://community.1and1.com/wp-content/uploads/2015/04/destination_webspace-1-300x62.png 300w" sizes="(max-width: 958px) 100vw, 958px" /><strong>Note</strong>: If your domain is already connected to a server or an application, such as 1&amp;1 MyWebsite, you cannot change the destination within the 1&amp;1 Domain Center.<br />
+To change the destination and DNS settings, disconnect the server or the application first.</li>
+<li>Select the <strong>target directory</strong>, where you have stored your WordPress files.<br />
+<a href="https://community.1and1.com/wp-content/uploads/2015/04/webspace_selectFolder-1.png"><img class="aligncenter size-full wp-image-5787" src="https://community.1and1.com/wp-content/uploads/2015/04/webspace_selectFolder-1.png" alt="webspace_selectFolder (1)" width="958" height="353" srcset="https://community.1and1.com/wp-content/uploads/2015/04/webspace_selectFolder-1.png 958w, https://community.1and1.com/wp-content/uploads/2015/04/webspace_selectFolder-1-300x111.png 300w" sizes="(max-width: 958px) 100vw, 958px" /></a></li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<p>In some cases it might take up to 48 hours until your website can be accessed under the desired domain.</p>
+<hr>
+<h2 id="optional-fixing-broken-links-when-switching-to-a-new-domain-or-coming-from-a-local-installation">Optional: Fixing Broken Links When Switching to a New Domain (or Coming From a Local Installation)</h2>
+<p>You can easily change outdated links with the <a title="open Plugin website in a new window" href="http://wordpress.org/plugins/search-and-replace/" target="_blank">Search &amp; Replace</a>&nbsp;plugin. <a title="Fixing Broken Links of a WordPress Installation" href="https://community.1and1.com/fixing-broken-links-wordpress/">Read more</a></p>
+<hr>
+<p>&nbsp;</p>
+<p style="text-align: center;">Thank you for taking the time to complete the transfer!</p>
+<p style="text-align: center;"><strong>Welcome to<br />
+</strong></p>
+<p style="text-align: center;"><strong> <a href="http://www.1and1.com"><img class="aligncenter wp-image-140" src="https://community.1and1.com/wp-content/uploads/2014/05/1und1_logo1.png" alt="1und1_logo1" width="32" height="32" srcset="https://community.1and1.com/wp-content/uploads/2014/05/1und1_logo1.png 253w, https://community.1and1.com/wp-content/uploads/2014/05/1und1_logo1-150x150.png 150w" sizes="(max-width: 32px) 100vw, 32px" /></a></strong></p>
+<hr>
+<div class="star-rating" data-post_id="1329"><span class="message">Please rate this post :</span> <span class="star-rating-stars"><span class="empty" data-rating="5">&#9734;</span><span class="empty" data-rating="4">&#9734;</span><span class="full" data-rating="3">&#9733;</span><span class="full" data-rating="2">&#9733;</span><span class="full" data-rating="1">&#9733;</span></span></div>
+						
+						
+<div id="comments" class="comments-area clearfix">
+
+	
+			<h2 class="comments-title">
+			30 thoughts on &ldquo;<span>Move WordPress website to a new provider/host</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+					<li class="comment even thread-even depth-1 parent" id="comment-30003">
+				<div id="div-comment-30003" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/231923ea7ead6263fccc219bc0cff24d?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/231923ea7ead6263fccc219bc0cff24d?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Alex Sirota</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-30003">
+			December 2, 2014 at 6:53 pm</a>		</div>
+
+		<p>This step by step is fine for a technical system administrator, but for selling managed wordpress services this migration step by step is not nearly foolproof or painless. If you plan to migrate more than a few websites per month this process should be automated&#8230;</p>
+<p>In many ways this is just like setting up a wordpress site from scratch, so why get the managed WordPress solution.</p>
+<p>Also 7 days of file backups is not nearly enough, 30 days is more like it. The database should also be backed up and have the capability of restored. When I called for support I was told you&#8217;d have to call to have the database restored &#8212; this should be doable directly from the user interface by myself, as usually this is a critical process that cannot take more than a few minutes, at most 60 minutes. Depending on someone in support to restore a database after the files have been restored is not the type of service I expect from Managed WordPress.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=30003#respond' onclick='return addComment.moveForm( "div-comment-30003", "30003", "respond", "1329" )' aria-label='Reply to Alex Sirota'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment byuser comment-author-philipp bypostauthor odd alt depth-2" id="comment-30274">
+				<div id="div-comment-30274" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e6f695c7af656ee476cb9c90f2e4968b?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e6f695c7af656ee476cb9c90f2e4968b?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Philipp Bellmann.</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-30274">
+			December 3, 2014 at 9:40 am</a>		</div>
+
+		<p>Alex<br />
+Thanks for your feedback. This articles offers one solution for migrating a WordPress Website. We know, it is not an ideal solution in every scenario and we are working on providing alternatives (as in guidance). Please grant us a little time &#8211; we have to start somewhere.<br />
+You offer some interesting critique and while I can make no promises, I wanted to let you know that we heard and value your ideas.<br />
+Phil</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=30274#respond' onclick='return addComment.moveForm( "div-comment-30274", "30274", "respond", "1329" )' aria-label='Reply to Philipp Bellmann.'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-95157">
+				<div id="div-comment-95157" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/96cd0305b84e1750be3d86a5fe4929eb?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/96cd0305b84e1750be3d86a5fe4929eb?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Lincoln</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-95157">
+			July 8, 2015 at 5:46 pm</a>		</div>
+
+		<p>I&#8217;ve read the previous version and the Jun 29 2015 updated version.</p>
+<p>The updated guide is now spot on. Just follow step by step to make the migration.</p>
+<p>One thing I would like to see is how to assign nameserver and DNS for a domain that is hosted elsewhere back to the corresponding oneandone wp hosting.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=95157#respond' onclick='return addComment.moveForm( "div-comment-95157", "95157", "respond", "1329" )' aria-label='Reply to Lincoln'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment byuser comment-author-philipp bypostauthor odd alt depth-2" id="comment-96086">
+				<div id="div-comment-96086" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/e6f695c7af656ee476cb9c90f2e4968b?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e6f695c7af656ee476cb9c90f2e4968b?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Philipp Bellmann</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-96086">
+			July 13, 2015 at 3:44 pm</a>		</div>
+
+		<p>Hey Lincoln,</p>
+<p>our team at help.1and1.com have a &#8211; lengthy 🙂 &#8211; <a href="http://help.1and1.com/domains-c36931/transfer-domains-c79823/to-1and1-c37567/add-an-external-domain-that-uses-your-name-server-a713215.html" rel="nofollow">work around</a>, that might work in your case. Please check it out and let us know how it works.</p>
+<p>Phil</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=96086#respond' onclick='return addComment.moveForm( "div-comment-96086", "96086", "respond", "1329" )' aria-label='Reply to Philipp Bellmann'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="comment-111794">
+				<div id="div-comment-111794" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/3b6ec249c85223e21c40badf63a58de0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3b6ec249c85223e21c40badf63a58de0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://www.traitpourtraitweb.fr' rel='external nofollow' class='url'>thieullet</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-111794">
+			September 16, 2015 at 9:50 pm</a>		</div>
+
+		<p>Hi, where can we find documentation about migrate a website from 1&amp;1 server to local wamp server  ?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=111794#respond' onclick='return addComment.moveForm( "div-comment-111794", "111794", "respond", "1329" )' aria-label='Reply to thieullet'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-119015">
+				<div id="div-comment-119015" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/694f113b08efa867b4885c3e07da8841?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/694f113b08efa867b4885c3e07da8841?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://joannalindenbaum.com' rel='external nofollow' class='url'>Rachel</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-119015">
+			October 14, 2015 at 7:51 pm</a>		</div>
+
+		<p>Please check the &#8220;importing database&#8221; instructions. If you click SQL, there is no browse button. I think you mean to click IMPORT, not SQL. Even so, it generates an error.SQL query:</p>
+<p>&#8212;<br />
+&#8212; Table structure for table `wp_commentmeta`<br />
+&#8212;</p>
+<p>DROP TABLE IF EXISTS `wp_commentmeta`;<br />
+MySQL said: Documentation</p>
+<p>#1046 &#8211; No database selected</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=119015#respond' onclick='return addComment.moveForm( "div-comment-119015", "119015", "respond", "1329" )' aria-label='Reply to Rachel'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-136125">
+				<div id="div-comment-136125" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/20d857113a85bc97848a47f46741b8d6?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/20d857113a85bc97848a47f46741b8d6?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://next-stageltd,org.uk' rel='external nofollow' class='url'>Robert</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-136125">
+			February 3, 2016 at 2:03 pm</a>		</div>
+
+		<p>I have recently transferred my website from a free hosting provider to my 1and1 hosting.</p>
+<p>I followed this guide in order to do it and it seemed to work great however, when I type in my domain it doesn&#8217;t bring up my website, just a blank white page.</p>
+<p>I changed the DNS settings to point to the correct folder but it doesn&#8217;t seem to be showing up. I dont know if this is something that takes a while to process or if I have done something wrong?</p>
+<p>Any help would be hugely appreciated!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=136125#respond' onclick='return addComment.moveForm( "div-comment-136125", "136125", "respond", "1329" )' aria-label='Reply to Robert'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-2 parent" id="comment-163508">
+				<div id="div-comment-163508" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/16d3c95f7f4ce7904cfffbfcae975186?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/16d3c95f7f4ce7904cfffbfcae975186?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Lars Henning</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-163508">
+			October 23, 2016 at 11:20 am</a>		</div>
+
+		<p>I have the same problem. I followed all the instructions and the domain is reported to have transferred successfully, but the DNS cannot be resolved when I try to access the domain.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=163508#respond' onclick='return addComment.moveForm( "div-comment-163508", "163508", "respond", "1329" )' aria-label='Reply to Lars Henning'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-3 parent" id="comment-163512">
+				<div id="div-comment-163512" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/16d3c95f7f4ce7904cfffbfcae975186?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/16d3c95f7f4ce7904cfffbfcae975186?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://www.jennybellmusic.com' rel='external nofollow' class='url'>Lars Henning</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-163512">
+			October 23, 2016 at 12:05 pm</a>		</div>
+
+		<p>I had to create the www subdomain manually and now the DNS resolves.</p>
+<p>However, I still have the problem with the blank white page when requesting the  top level domain. It only happens when trying to access the top level. If I request a WP page or category, it works just fine.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=163512#respond' onclick='return addComment.moveForm( "div-comment-163512", "163512", "respond", "1329" )' aria-label='Reply to Lars Henning'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-4 parent" id="comment-163514">
+				<div id="div-comment-163514" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/16d3c95f7f4ce7904cfffbfcae975186?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/16d3c95f7f4ce7904cfffbfcae975186?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://www.jennybellmusic.com' rel='external nofollow' class='url'>Lars Henning</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-163514">
+			October 23, 2016 at 12:30 pm</a>		</div>
+
+		<p>Nevermind, I just found that there was a default.html file in the top level directory that was overriding WP&#8217;s index.php! Not sure how that got in there. Doh!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=163514#respond' onclick='return addComment.moveForm( "div-comment-163514", "163514", "respond", "1329" )' aria-label='Reply to Lars Henning'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-5" id="comment-164523">
+				<div id="div-comment-164523" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-164523">
+			October 31, 2016 at 11:03 am</a>		</div>
+
+		<p>Hi Lars,</p>
+<p>I am happy to hear you found a solution. 🙂 </p>
+<p>Best,<br />
+Michael, 1&amp;1</p>
+
+		
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-161514">
+				<div id="div-comment-161514" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/09f6a3ce60037ae81864eb1bd66a13dd?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/09f6a3ce60037ae81864eb1bd66a13dd?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://www.bikesbarcelonarental.es' rel='external nofollow' class='url'>Victor Beckers</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-161514">
+			October 2, 2016 at 1:23 pm</a>		</div>
+
+		<p>Hi, we are clients our ID: XXXXXXXX [ID deleted by Support. Please don&#8217;t post your customer data in public!]<br />
+We have two hostings (bikesbarcelonarental.es and bikesbarcelonarental.com), we are now doing a website with wordpress that we would like to host in our account one&amp;one, is it possible?<br />
+If so, which is the procedure?<br />
+The web designer is now asking me the hosting details, can you assist?<br />
+Thanks</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=161514#respond' onclick='return addComment.moveForm( "div-comment-161514", "161514", "respond", "1329" )' aria-label='Reply to Victor Beckers'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-164508">
+				<div id="div-comment-164508" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-164508">
+			October 31, 2016 at 10:05 am</a>		</div>
+
+		<p>Hi Victor,</p>
+<p>You can add hosting to your domains through your Control Panel. For more information regarding the switching of your package, please reference the following 1&amp;1 Help Article: <a href="http://ayuda.1and1.es/cuenta-y-facturacion-c85121/configuracion-de-usuario-c64807/cambiar-de-tarifa-a792589.html" rel="nofollow">http://ayuda.1and1.es/cuenta-y-facturacion-c85121/configuracion-de-usuario-c64807/cambiar-de-tarifa-a792589.html</a></p>
+<p>Best regards,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=164508#respond' onclick='return addComment.moveForm( "div-comment-164508", "164508", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-161515">
+				<div id="div-comment-161515" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/09f6a3ce60037ae81864eb1bd66a13dd?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/09f6a3ce60037ae81864eb1bd66a13dd?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://www.bikesbarcelonarental.es' rel='external nofollow' class='url'>Victor Beckers</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-161515">
+			October 2, 2016 at 1:24 pm</a>		</div>
+
+		<p>Other question, do we have an email address included in the domain?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=161515#respond' onclick='return addComment.moveForm( "div-comment-161515", "161515", "respond", "1329" )' aria-label='Reply to Victor Beckers'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-164509">
+				<div id="div-comment-164509" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-164509">
+			October 31, 2016 at 10:07 am</a>		</div>
+
+		<p>With your current package, you are able to create one mailbox and 5 forwarding addresses. If you decide to switch to a hosting package, you will have the ability to add additional mailboxes. </p>
+<p>Best,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=164509#respond' onclick='return addComment.moveForm( "div-comment-164509", "164509", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1 parent" id="comment-166997">
+				<div id="div-comment-166997" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/7abb5a88907c62191e87ab4d03717428?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/7abb5a88907c62191e87ab4d03717428?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Kim</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-166997">
+			November 22, 2016 at 7:00 am</a>		</div>
+
+		<p>Do we have to move our domain registration to 1&amp;1 or just change the dns with the registrar,</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=166997#respond' onclick='return addComment.moveForm( "div-comment-166997", "166997", "respond", "1329" )' aria-label='Reply to Kim'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-167906">
+				<div id="div-comment-167906" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-167906">
+			November 28, 2016 at 3:18 pm</a>		</div>
+
+		<p>Hi Kim,</p>
+<p>you can do both.</p>
+<p>Please keep in mind that you have to order the domain as an external domain with us before you are allowed to use our DNS with the registrar: <a href="http://help.1and1.com/domains-c36931/transfer-domains-c79823/to-1and1-c37567/point-your-domain-to-1and1-name-servers-a594802.html" rel="nofollow">http://help.1and1.com/domains-c36931/transfer-domains-c79823/to-1and1-c37567/point-your-domain-to-1and1-name-servers-a594802.html</a></p>
+<p>Best,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=167906#respond' onclick='return addComment.moveForm( "div-comment-167906", "167906", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-167073">
+				<div id="div-comment-167073" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/8a9500852aad9257f5bf2e514524f4dc?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/8a9500852aad9257f5bf2e514524f4dc?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Nick</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-167073">
+			November 22, 2016 at 10:54 pm</a>		</div>
+
+		<p>Can you import a wordpress website into a Managed WordPress installation in the 1&amp;1 App Centre?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=167073#respond' onclick='return addComment.moveForm( "div-comment-167073", "167073", "respond", "1329" )' aria-label='Reply to Nick'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2" id="comment-167204">
+				<div id="div-comment-167204" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-167204">
+			November 23, 2016 at 3:38 pm</a>		</div>
+
+		<p>Hi Nick,</p>
+<p>You don&#8217;t have a direct access to the webspace folders and to the MySQL data base- so the import plugin for WordPress should do the job for Managed WordPress installations.</p>
+<p>Best,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=167204#respond' onclick='return addComment.moveForm( "div-comment-167204", "167204", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-168377">
+				<div id="div-comment-168377" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/0bcf63a174238c24d1600e27e2b7e3b3?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0bcf63a174238c24d1600e27e2b7e3b3?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://walks-in-notts' rel='external nofollow' class='url'>david</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-168377">
+			December 1, 2016 at 2:45 pm</a>		</div>
+
+		<p>Hi</p>
+<p>I&#8217;m a bit baffled by WordPress (or 1and1 !).  I&#8217;ve created two pages with a menu to allow access to the second from the first (home) page. It looks Ok when viewed from WP but not from a browse. If I simply enter the domain name I see a page that says&#8217;Nothing found; though it does have the menys on the right. I need to specify walks-in-notts/index to access the WP home page.</p>
+<p>Any help please?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=168377#respond' onclick='return addComment.moveForm( "div-comment-168377", "168377", "respond", "1329" )' aria-label='Reply to david'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1 parent" id="comment-168381">
+				<div id="div-comment-168381" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/0bcf63a174238c24d1600e27e2b7e3b3?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0bcf63a174238c24d1600e27e2b7e3b3?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://walks-in-notts' rel='external nofollow' class='url'>David</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-168381">
+			December 1, 2016 at 2:57 pm</a>		</div>
+
+		<p>Hi</p>
+<p>I&#8217;ve created a WordPress site of two pages linker by a menu. All is OK when viewed via WP but fresh from a browser the site shows a WP page with &#8216;Nothing Found&#8217; though the menu is displayed. I need to specify walks-in-notts/index to see the expected home page.</p>
+<p>Help please.</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=168381#respond' onclick='return addComment.moveForm( "div-comment-168381", "168381", "respond", "1329" )' aria-label='Reply to David'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-2" id="comment-168969">
+				<div id="div-comment-168969" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-168969">
+			December 6, 2016 at 2:03 pm</a>		</div>
+
+		<p>Hi David,</p>
+<p>it&#8217;s pretty hard to say something regarding this without knowing the actual url. I assume that you left out the domain extension for &#8220;walks-in-notts&#8221; on purpose in your comment? </p>
+<p>Can you tell us the complete url to your WordPress site?</p>
+<p>Thanks,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=168969#respond' onclick='return addComment.moveForm( "div-comment-168969", "168969", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-169074">
+				<div id="div-comment-169074" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/a2768f25a1b57e510267e5837ee6eb82?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/a2768f25a1b57e510267e5837ee6eb82?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://kirstenivatts.com/' rel='external nofollow' class='url'>Kirsten</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-169074">
+			December 7, 2016 at 8:27 pm</a>		</div>
+
+		<p>Hi There</p>
+<p>I have followed your guide and managed to transfer everything over from my previous provide to yourselves &#8211; however I have hit an issue when trying to brows the site. I get the following error message: </p>
+<p>Fatal error: require(): Failed opening required &#8216;/homepages/16/d657447625/htdocs/kirstenivatts/wp-blog-header.php&#8217; (include_path=&#8217;.:/usr/lib/php7.0&#8242;) in /homepages/16/d657447625/htdocs/kirstenivatts/index.php on line 17</p>
+<p>I have checked and I have php7 installed on for the site but I have a feeling I may have missed something.</p>
+<p>Any ideas would be great?</p>
+<p>Thanks</p>
+<p>Kirsten</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=169074#respond' onclick='return addComment.moveForm( "div-comment-169074", "169074", "respond", "1329" )' aria-label='Reply to Kirsten'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1" id="comment-169099">
+				<div id="div-comment-169099" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/fd0f56106f83b59cabc80a540e32b397?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/fd0f56106f83b59cabc80a540e32b397?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn">Jim Wildman</cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-169099">
+			December 8, 2016 at 9:48 am</a>		</div>
+
+		<p>For migrating an existing WP install to 1&amp;1, do I setup a managed WP site first?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=169099#respond' onclick='return addComment.moveForm( "div-comment-169099", "169099", "respond", "1329" )' aria-label='Reply to Jim Wildman'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1" id="comment-169105">
+				<div id="div-comment-169105" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-169105">
+			December 8, 2016 at 1:16 pm</a>		</div>
+
+		<p>Hi Kirsten,</p>
+<p>I looked into your account and I found an .htaccess file for WordPress which is quite complex. Maybe there is something in it which was configured espacially for your previous provider.</p>
+<p>Additionaly, you should check if the domain is connected to your WordPress main folder on the webspace. If you defined the domain as the site url in WordPress, you should connect the domain directly to this main folder in your Control Centre (&#8220;edit destination&#8221;): <a href="http://help.1and1.co.uk/domains-c40986/manage-domains-c79879/domain-destination-c80882/set-up-or-change-a-destination-for-a-domain-a610587.html" rel="nofollow">http://help.1and1.co.uk/domains-c40986/manage-domains-c79879/domain-destination-c80882/set-up-or-change-a-destination-for-a-domain-a610587.html</a></p>
+<p>PHP settings are fine.</p>
+<p>Regards,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=169105#respond' onclick='return addComment.moveForm( "div-comment-169105", "169105", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+		<li class="comment odd alt thread-even depth-1 parent" id="comment-173904">
+				<div id="div-comment-173904" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/0531430ad3f7d804deda86217788de27?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0531430ad3f7d804deda86217788de27?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://the-bead.com' rel='external nofollow' class='url'>Kaige</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-173904">
+			February 2, 2017 at 5:33 am</a>		</div>
+
+		<p>I have a website hosted elsewhere and I want to move the wordpress site over to my new domain name here. I edited the wp-cofig file. I also dowloaded my site from my other hosting. But wordpress install fails when I try to install. Should I not have copied all the files over and just the wp files? Or did I need to install wordpress before uploading all the files? How can I get WordPress to install without failing?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=173904#respond' onclick='return addComment.moveForm( "div-comment-173904", "173904", "respond", "1329" )' aria-label='Reply to Kaige'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment even depth-2 parent" id="comment-173927">
+				<div id="div-comment-173927" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-173927">
+			February 2, 2017 at 3:44 pm</a>		</div>
+
+		<p>Hi Kaige,</p>
+<p>we had a little glitch regarding new installations in the 1&amp;1 App Center. This was solved today. Can you please try it again?</p>
+<p>Thanks and best regards,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=173927#respond' onclick='return addComment.moveForm( "div-comment-173927", "173927", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-3" id="comment-174219">
+				<div id="div-comment-174219" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/0531430ad3f7d804deda86217788de27?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0531430ad3f7d804deda86217788de27?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://the-bead.com' rel='external nofollow' class='url'>Kaige</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-174219">
+			February 6, 2017 at 4:54 am</a>		</div>
+
+		<p>Thanks! It installed but now I can&#8217;t figure out how to connect my site to WordPress. I uploaded my old theme files to click and builds folder and then my wordpress folder. When I update the wp-config.php file with the new database and go to my site/wp-admin it redirects to my old hosting. Do you know how I can get my new site to go to my new hosting? Thank you!</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=174219#respond' onclick='return addComment.moveForm( "div-comment-174219", "174219", "respond", "1329" )' aria-label='Reply to Kaige'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li class="comment even thread-odd thread-alt depth-1 parent" id="comment-174257">
+				<div id="div-comment-174257" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/c8f8781e995e9ec66d183673bdc7b8ee?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/c8f8781e995e9ec66d183673bdc7b8ee?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='http://raspberrycoulis.co.uk' rel='external nofollow' class='url'>Wesley A</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-174257">
+			February 6, 2017 at 4:02 pm</a>		</div>
+
+		<p>Ok, so I&#8217;m trying to migrate my WP site from Planet Hippo to you guys having bought the WP Managed Basic account today. I have followed the above, but do you then need to do the WP install through the 1&amp;1 App Center?</p>
+<p>I also had to release my domain from Planet Hippo and paid you guys when transferring this over &#8211; is the correct?</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=174257#respond' onclick='return addComment.moveForm( "div-comment-174257", "174257", "respond", "1329" )' aria-label='Reply to Wesley A'>Reply</a></div>
+				</div>
+		<ol class="children">
+		<li class="comment odd alt depth-2" id="comment-174261">
+				<div id="div-comment-174261" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt='' src='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=32&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/68bb426d2f27c3e33835bee9fa331bc0?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo' height='32' width='32' />			<cite class="fn"><a href='https://twitter.com/1and1help' rel='external nofollow' class='url'>1and1help</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://community.1and1.com/moving-your-wordpress-website-to-1and1/#comment-174261">
+			February 6, 2017 at 5:11 pm</a>		</div>
+
+		<p>Hi Wesley A,</p>
+<p>if you have all your old webspace files and mysql database from the old provider, you simply can upload the webspace files and import your database data to a fresh mysql database. There is no need to install a new WordPress from the App Center in this case.</p>
+<p>To use your installation with your domain, moving it to your hosting package is the best way, yes.</p>
+<p>Best regards,<br />
+Michael, 1&amp;1</p>
+
+		<div class="reply"><a rel='nofollow' class='comment-reply-link' href='https://community.1and1.com/moving-your-wordpress-website-to-1and1/?replytocom=174261#respond' onclick='return addComment.moveForm( "div-comment-174261", "174261", "respond", "1329" )' aria-label='Reply to 1and1help'>Reply</a></div>
+				</div>
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+									<div id="respond">
+				<h3 id="reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/moving-your-wordpress-website-to-1and1/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="https://community.1and1.com/wp-comments-post.php" method="post" id="commentform" role="form">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<div class="comment-form-author form-group"><label for="author" class="control-label">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" class="form-control" aria-required='true' /></div>
+<div class="comment-form-email form-group"><label for="email" class="control-label">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" class="form-control" aria-required='true' /></div>
+<div class="comment-form-url form-group"><label for="url" class="control-label">Website</label><input id="url" name="url" type="text" value="" size="30" class="form-control" /></div>
+												<div class="comment-form-comment form-group"><label for="comment" class="control-label">Comment</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></div>												<p class="form-submit">
+							<button name="submit" type="submit" id="submit" class="btn btn-primary">Post Comment</button>
+							<input type='hidden' name='comment_post_ID' value='1329' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="88cf082e23" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="34"/></p>					</form>
+							</div><!-- #respond -->
+						
+</div><!-- #comments .comments-area -->					</div>
+				</div>
+			</article>
+
+			</div>
+
+			
+			<aside class="sidebar col-lg-3 col-md-4 single">
+
+				<div id="oneandone_post_list-10" class="widget widget_oneandone_post_list"><h3 class="widget-title decoration-gradient-a2 transformation-skew-c2">Managed Wordpress<span class="glyphicon glyphicon-heart"></span></h3><div class="widget-inner"><ul><li><a href="https://community.1and1.com/wordpress-4-7-2-security-update/">WordPress 4.7.2 Fixes Critical Vulnerabilities</a></li><li><a href="https://community.1and1.com/regular-updates-for-security-build-trust/">Regular Updates Establish Security and Build Trust</a></li><li><a href="https://community.1and1.com/two-factor-authentication-with-wordpress-and-google-authenticator/">Setting Up Two Factor Authentication with WordPress and Google Authenticator</a></li><li><a href="https://community.1and1.com/activate-ssl-for-your-managed-wordpress-websites/">Protecting WordPress with SSL was never easier: Managed WordPress by 1&1</a></li><li><a href="https://community.1and1.com/enabling-the-wordpress-theme-and-plugin-editor-wordpress-free-mode/">Enabling the WordPress Theme and Plugin Editor</a></li></ul></div></div><div id="search-4" class="widget widget_search"><h3 class="widget-title decoration-gradient-a2 transformation-skew-c2">Search<span class="glyphicon glyphicon-search"></span></h3><div class="widget-inner">
+<form role="search" method="get" class="search-form" action="https://community.1and1.com/">
+    
+	<input type="hidden" name="cat" value="" />	
+        <fieldset>
+                <div class="input-group">
+                        <input type="text" name="s" class="form-control" placeholder="search term" />
+
+                        <span class="input-group-btn">
+                                <input type="submit" id="search-suggest-button" class="btn btn-primary" value="Search" />
+                        </span>
+                </div>
+        </fieldset>
+</form></div></div><div id="star_rating-4" class="widget widget_star_rating"><h3 class="widget-title decoration-gradient-a2 transformation-skew-c2">Best rated<span class="glyphicon glyphicon-star"></span></h3><div class="widget-inner"><ul><li><a href="https://community.1and1.com/optimizing-ssl-encryption-detecting-removing-mixed-content/">Optimizing SSL encryption: Detecting and removing mixed content</a></li><li><a href="https://community.1and1.com/wordpress-4-5-1/">WordPress 4.5.1 released</a></li><li><a href="https://community.1and1.com/php-7-0-9-php-5-6-24-httpoxy-problem/">PHP 7.0.9 and 5.6.24 close security gaps and protect against the httpoxy problem</a></li><li><a href="https://community.1and1.com/how-to-connect-or-change-a-domain-wordpress-website/">How to connect a domain to your WordPress website</a></li><li><a href="https://community.1and1.com/ddos-protection-by-1and1/">In-depth look: DDoS protection by 1&1</a></li></ul></div></div><div id="oneandone_post_list-6" class="widget widget_oneandone_post_list"><h3 class="widget-title decoration-gradient-a2 transformation-skew-c2">Most read<span class="glyphicon glyphicon-eye-open"></span></h3><div class="widget-inner"><ul><li><a href="https://community.1and1.com/wordpress-4-7-2-security-update/">WordPress 4.7.2 Fixes Critical Vulnerabilities</a></li><li><a href="https://community.1and1.com/regular-updates-for-security-build-trust/">Regular Updates Establish Security and Build Trust</a></li><li><a href="https://community.1and1.com/two-factor-authentication-with-wordpress-and-google-authenticator/">Setting Up Two Factor Authentication with WordPress and Google Authenticator</a></li><li><a href="https://community.1and1.com/how-to-install-joomla-in-45-seconds/">How to install Joomla! in under 45 seconds</a></li><li><a href="https://community.1and1.com/activate-ssl-for-your-managed-wordpress-websites/">Protecting WordPress with SSL was never easier: Managed WordPress by 1&1</a></li><li><a href="https://community.1and1.com/enabling-the-wordpress-theme-and-plugin-editor-wordpress-free-mode/">Enabling the WordPress Theme and Plugin Editor</a></li><li><a href="https://community.1and1.com/guidelines-to-avoid-a-seo-penalty/">Follow These Guidelines to Avoid a SEO Penalty</a></li><li><a href="https://community.1and1.com/1and1-control-panel-ios-android/">1&1 Control Panel for iOS and Android: Manage your Websites, Domains and Settings</a></li></ul></div></div>
+			</aside>
+
+		</div>
+
+
+		
+	</div>
+
+	</div>
+	<footer>
+		<div id="footer" class="container">
+			<hr class="footer-separator center" />
+
+			
+		
+		<ul class="footer-nav">
+			<li>
+				<a href="https://www.1and1.com/AboutUs" title="About 1&amp;1">
+					About 1&amp;1
+				</a>
+			</li>
+			<li>
+				<a href="http://blog.1and1.com/" title="Blog">
+					Blog
+				</a>
+			</li>
+			<li>
+				<a href="http://newsroom.1and1.com" title="Newsroom">
+					Newsroom
+				</a>
+			</li>
+			<li>
+				<a href="https://www.1and1.com/Gtc" title="T&amp;C">
+					Terms and Conditions
+				</a>
+			</li>
+			<li>
+				<a href="https://www.1and1.com/PrivacyPolicy" title="Privacy Policy">
+					Privacy Policy
+				</a>
+			</li>
+			<li>
+				<a href="http://help.1and1.com/" title="Help Center">
+					Help Center
+				</a>
+			</li>
+			<li>
+				<a href="https://www.1and1.com/TellAFriend" title="Tell A Friend">
+					Tell A Friend
+				</a>
+			</li>
+			<li>
+				<a href="https://www.1and1.com/Contact" title="Legal">
+					Legal
+				</a>
+			</li>	
+			<li class="copyright">&copy; 2017 1&amp;1 Internet Inc.</li>
+		</ul>
+
+		<div class="footer-social">
+			<ul>
+				<li>
+					<a href="https://www.facebook.com/1and1" class="target" rel="_blank" target="_blank">
+						<img src="https://community.1and1.com/wp-content/plugins/1and1-shared/images/ic-social-facebook.gif" alt="Facebook" title="Link to Facebook" width="28" height="28">
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/1and1" class="target" rel="_blank" target="_blank">
+						<img src="https://community.1and1.com/wp-content/plugins/1and1-shared/images/ic-social-twitter.gif" alt="Twitter" title="Link to Twitter" width="28" height="28">
+					</a>
+				</li>
+				<li>
+					<a href="https://plus.google.com/+1and1/posts" class="target" rel="_blank" target="_blank">
+						<img src="https://community.1and1.com/wp-content/plugins/1and1-shared/images/ic-social-google.gif" alt="Google" title="Link to Google" width="28" height="28">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/user/1and1" class="target" rel="_blank" target="_blank">
+						<img src="https://community.1and1.com/wp-content/plugins/1and1-shared/images/ic-social-youtube.gif" alt="YouTube" title="Link to YouTube" width="28" height="28">
+					</a>
+				</li>
+				<li>
+					<a href="http://www.linkedin.com/company/1%261-internet-inc-" class="target" rel="_blank" target="_blank">
+						<img src="https://community.1and1.com/wp-content/plugins/1and1-shared/images/ic-social-linkedin.gif" alt="Linkedin" title="Link to Linkedin" width="28" height="28">
+					</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</footer>
+
+	<script type='text/javascript' src='https://community.1and1.com/wp-content/plugins/akismet/_inc/form.js?ver=3.1.11'></script>
+<link rel='stylesheet' id='1and1_star_rating-css'  href='https://community.1and1.com/wp-content/plugins/1and1-star-rating/css/front.css?ver=1.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://community.1and1.com/wp-content/themes/1and1/js/category-filter-dropdown.js?ver=4.5.4'></script>
+<script type='text/javascript' src='https://community.1and1.com/wp-content/themes/1and1/js/bootstrap.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='https://community.1and1.com/wp-content/themes/1and1/js/main.js?ver=1.1.0'></script>
+<script type='text/javascript' src='https://community.1and1.com/wp-includes/js/comment-reply.min.js?ver=4.5.4'></script>
+<script type='text/javascript' src='https://community.1and1.com/wp-includes/js/wp-embed.min.js?ver=4.5.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ondandone_star_rating = {"ajax_url":"\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://community.1and1.com/wp-content/plugins/1and1-star-rating/js/front.js?ver=1.0'></script>
+
+		<!-- Piwik -->
+		<script type="text/javascript">
+			var _paq = _paq || [];
+			_paq.push(['trackPageView']);
+			_paq.push(['enableLinkTracking']);
+			
+			_paq.push(["setCustomVariable", 1, "post_id", 1329, "page"]);
+
+				_paq.push(["setCustomVariable", 1, "category", 289, "page"]);_paq.push(["setCustomVariable", 1, "category", 303, "page"]);
+			(function() {
+				var u=(("https:" == document.location.protocol) ? "https:" : "http:") + "//piwik.1u1s.de/";
+				_paq.push(['setTrackerUrl', u+'piwik.php']);
+				_paq.push(['setSiteId', 52]);
+				var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+				g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+			})();
+		</script>
+		<noscript>
+			<p><img src="//piwik.1u1s.de/piwik.php?idsite=52" style="border:0;" alt="" /></p>
+		</noscript>
+		<!-- End Piwik Code -->
+
+			
+</body>
+</html>

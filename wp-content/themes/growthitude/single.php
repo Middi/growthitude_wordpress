@@ -13,7 +13,7 @@
     <img class="img img-responsive center-block" src="<?php
 if ( has_post_thumbnail() ) { the_post_thumbnail_url();
 }
-?>" alt="...">
+?>" alt="blog image">
 
     <p class="black"><?php the_content(); ?></p>
 

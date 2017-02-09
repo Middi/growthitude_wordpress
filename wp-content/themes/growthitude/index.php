@@ -14,7 +14,7 @@
           <div class="row">
 <br><br><br>
 <?php global $query_string;
-        query_posts ('posts_per_page=30');
+        query_posts ('posts_per_page=50');
 
         while(have_posts()) : the_post(); ?>
 
@@ -30,7 +30,7 @@ if ( $id = get_post_thumbnail_id() ) {
 ?>>
 <div class="title" id="target">
                       <a href="<?php the_permalink(); ?>"><span class="highlight"><?php the_title(); ?></span></a>
-                        <?php the_excerpt('Read More'); ?>
+                        <?php the_excerpt(); ?>
 
 
                     </div>
@@ -40,9 +40,6 @@ if ( $id = get_post_thumbnail_id() ) {
               <?php endwhile; ?>
 
           </div>
-
-
-
 
       </div>
   </div>

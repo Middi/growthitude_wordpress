@@ -14,772 +14,839 @@ Text Domain: Growthitude
 
 
 /*  ---- COLORS ---- */
+
 * {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
-  color: #6f6f6f;
-  font-size: 16px;
+    color: #6f6f6f;
+    font-size: 16px;
 }
 
 a:hover {
-  color: #568fbb;
-  text-decoration: none;
+    color: #568fbb;
+    text-decoration: none;
 }
 
 .active {
-  color: #568fbb;
+    color: #568fbb;
 }
 
 h1 {
-  font-size: 3.3em;
-  color: white;
-  margin-bottom: 42px;
+    font-size: 3.3em;
+    color: white;
+    margin-bottom: 42px;
 }
 
 h2 {
-  padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 h3 {
-  font-size: 1.3em;
-  color: white;
-  font-weight: 200;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 200;
 }
 
 h4 {
-  line-height: 3.5rem;
-  font-size: 3rem;
-  padding: 5px 18px 5px 8px;
+    line-height: 3.5rem;
+    font-size: 3rem;
+    padding: 5px 18px 5px 8px;
 }
 
 h4 span {
-  color: white;
-  background-color: #568fbb;
-  font-weight: 600;
+    color: white;
+    background-color: #568fbb;
+    font-weight: 600;
 }
 
 h4 a:hover {
-  color: #568fbb;
-  text-decoration: none;
+    color: #568fbb;
+    text-decoration: none;
 }
 
 p {
-  color: white;
-  font-weight: 400;
-  line-height: 1.3em;
-  font-size: 18px;
-  padding-bottom: 20px;
+    color: white;
+    font-weight: 400;
+    line-height: 1.3em;
+    font-size: 18px;
+    padding-bottom: 20px;
 }
 
 .black {
-  color: #222;
+    color: #222;
 }
 
 .border {
-  border: 2px solid black;
+    border: 2px solid black;
 }
 
 .container-fluid {
-  background-color: #eee;
+    background-color: #eee;
 }
 
 header {
-  height: 60px;
-  top: 0;
-  width: 100%;
-  padding: 7px;
-  border-bottom: 4px #568fbb solid;
-  position: fixed;
-  z-index: 22;
-  background-color: white;
+    height: 60px;
+    top: 0;
+    width: 100%;
+    padding: 7px;
+    border-bottom: 4px #568fbb solid;
+    position: fixed;
+    z-index: 22;
+    background-color: white;
 }
 
 .inner-header {
-  max-width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
 }
 
 .logo {
-  width: 160px;
+    width: 160px;
 }
 
 nav {
-  float: right;
+    float: right;
 }
 
 nav ul {
-  padding: 12px 0;
+    padding: 12px 0;
 }
 
 nav ul li {
-  display: inline;
-  padding: 8px;
+    display: inline;
+    padding: 8px;
 }
 
 #hero {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url(http://www.growthitude.com/images/hero-img.jpg) center center;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  padding: 160px 20px;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://www.growthitude.com/images/hero-img.jpg) center center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding: 160px 20px;
 }
 
 .hero-content {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  max-width: 800px;
-  padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .hero-pages {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  max-width: 1300px;
-  padding: 40px 120px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 1300px;
+    padding: 40px 120px 25px;
 }
 
 .book {
-  position: relative;
-  width: 130px;
-  height: 158px;
-  top: 515px;
-  background: url("../../../wp-content/uploads/2017/02/book.png") no-repeat;
-  background-size: contain;
-  z-index: 100;
+    position: relative;
+    width: 130px;
+    height: 158px;
+    top: 515px;
+    background: url("../../../wp-content/uploads/2017/02/book.png") no-repeat;
+    background-size: contain;
+    z-index: 100;
 }
 
 .signup {
-  background-color: #568fbb;
-  height: auto;
-  width: 100%;
-  padding: 0;
+    background-color: #568fbb;
+    height: auto;
+    width: 100%;
+    padding: 0;
 }
 
 .sub-title {
-  padding-top: 4px;
-  margin: 0;
-  font-weight: 400;
+    padding-top: 4px;
+    margin: 0;
+    font-weight: 400;
 }
 
 form {
-  margin-top: -12px;
-  margin-bottom: -10px;
+    margin-top: -12px;
+    margin-bottom: -10px;
 }
 
 .btn-md {
-  height: 34px;
-  font-size: 16px;
-  font-weight: 600;
+    height: 34px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .about-container {
-  height: auto;
-  background-color: #636363;
+    height: auto;
+    background-color: #636363;
 }
 
 .tonje-img {
-  background: url("../../../wp-content/uploads/2017/02/tonje3.jpg") center top no-repeat;
-  background-size: cover;
-  height: 600px;
-  padding: 0;
+    background: url("../../../wp-content/uploads/2017/02/tonje3.jpg") center top no-repeat;
+    background-size: cover;
+    height: 600px;
+    padding: 0;
 }
 
 .about-caption {
-  height: auto;
-  max-width: 600px;
-  background-color: #636363;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
-  padding: 20px 40px;
+    height: auto;
+    max-width: 600px;
+    background-color: #636363;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding: 20px 40px;
 }
 
-.about-caption h2,
-.about-caption p {
-  color: white;
+.about-caption h2, .about-caption p {
+    color: white;
 }
 
 .about-caption h2 {
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-color: #568fbb;
-}
-
-.featured {
-  font-size: 1.9rem;
-  padding-top: 30px;
-}
-
-.cred {
-  background-color: #ddd;
-  padding: 12px;
-}
-
-.padded {
-  padding-top: 10px;
-}
-
-.padded-lg {
-  padding-top: 100px;
-  color: #555;
-}
-
-#blogs {
-  padding-bottom: 60px;
-}
-
-#blogs h2 {
-  padding: 30px 0;
-}
-
-#blogs h3 {
-  color: #568fbb;
-}
-
-.prod-hidden {
-  display: none;
-}
-
-.products {
-  padding-bottom: 100px;
-}
-
-.products h2 {
-  padding: 30px 0;
-}
-
-.products h3 {
-  color: #568fbb;
-}
-
-.image {
-  position: relative;
-  overflow: hidden;
-  height: 260px;
-}
-
-.image img {
-  position: absolute;
-  min-height: 260px;
-  width: 100%;
-}
-
-.prodnail, .prodnail1, .prodnail2, .prodnail3, .prodnail4 {
-  width: 270px;
-  height: 270px;
-  margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.blognail, .blognail1, .blognail2, .blognail3 {
-  width: 350px;
-  height: 350px;
-  margin: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.prodnail-hidden {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 350px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 40px;
-}
-
-.prodnail1 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
-  background-size: cover;
-}
-
-.prodnail2 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/business.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/business.jpg") left top no-repeat;
-  background-size: cover;
-}
-
-.prodnail3 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/uncover.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/uncover.jpg") left top no-repeat;
-  background-size: cover;
-}
-
-.prodnail4 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/culture.jpg") left top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/culture.jpg") left top no-repeat;
-  background-size: cover;
-}
-
-.blognail2 {
-  background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/lindsey.jpg") center top no-repeat;
-  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/lindsey.jpg") center top no-repeat;
-  background-size: cover;
-}
-
-
-.title {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.title p {
-  color: white;
-  font-size: 1.7rem;
-  padding: 0.5rem 0.8rem;
-  font-weight: 400;
-}
-
-.blognail .title, .blognail1 .title, .blognail2 .title, .blognail3 .title {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.blognail .title p, .blognail1 .title p, .blognail2 .title p, .blognail3 .title p {
-  color: white;
-  font-size: 1.7rem;
-  line-height: 1.7rem;
-  padding: 0.5rem 0.8rem;
-  font-weight: 400;
-}
-
-.title a {
-  font-size: 2.3rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  padding: 20px 0px 0 0px;
-  font-weight: 700;
-}
-
-.title a .highlight {
-  display: inline;
-  color: white;
-  padding: 0.5rem 0.6rem;
-  -webkit-box-decoration-break: clone;
-  -ms-box-decoration-break: clone;
-  -o-box-decoration-break: clone;
-  box-decoration-break: clone;
-  background-image: -webkit-linear-gradient(left, #568fbb, #568fbb 50%, transparent 50%, transparent);
-  background-image: linear-gradient(to right, #568fbb, #568fbb 50%, transparent 50%, transparent);
-  background-position: 90% 0;
-  background-size: 270% 100%;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
-}
-
-.title a .highlight:hover {
-  color: white;
-  background-position: 0 0;
-}
-
-.product {
-  height: 600px;
-}
-
-.blognail, .blognail1, .blognail2, .blognail3 {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.dark {
-  background-color: #f2f2f2;
-}
-
-.master-title {
-  font-size: 60px;
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-color: #568fbb;
-}
-
-#shrink {
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../wp-content/uploads/2017/02/prod-img.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../wp-content/uploads/2017/02/prod-img.jpg");
-  background-position: center top no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  padding-top: 80px;
-}
-
-footer {
-  min-height: 200px;
-  background-color: #282828;
-  padding: 16px 0;
-  color: #bbb;
-}
-
-.horizontal-mailchimp .clear,
-.horizontal-mailchimp .mc-field-group {
-  display: inline-block;
-  max-height: 80px;
-  max-width: 1150px;
-}
-
-.clear {
-  margin-bottom: 14px;
-}
-
-.horizontal-mailchimp label {
-  display: none;
-  height: 0;
-  text-indent: -9999px;
-  height: 20px;
-}
-
-.horizontal-mailchimp {
-  background: #568fbb;
-  margin: 0 auto;
-  min-height: 70px;
-  padding: 1px 20px 6px;
-  text-align: center;
-  border-top: 2px rgba(255, 255, 255, 0.5) solid;
-  border-bottom: 2px rgba(255, 255, 255, 0.5) solid;
-}
-
-.EMAIL,
-.NAME {
-  min-width: 300px;
-  min-height: 34px;
-  margin: 14px 5px;
-  padding: 0 5px;
-}
-
-.blog-main {
-  padding: 60px 200px;
-}
-
-.blog-main p {
-  color: #222;
-}
-
-.vid {
-  width: 640px;
-  height: 400px;
-}
-
-.blog-title {
-  color: #333;
-  font-size: 1.8em;
-}
-
-.player {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #eee;
-}
-
-.player p {
-  padding: 5px;
-}
-
-.player img {
-  width: 100%;
-}
-
-audio {
-  width: 100%;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-@media only screen and (max-width: 1200px) {
-  .prodnail, .prodnail1, .prodnail2, .prodnail3, .prodnail4 {
-    width: 220px;
-    height: 220px;
-  }
-  .title p {
-    font-size: 1.4rem;
-    padding-left: 4px;
-  }
-  .title a {
-    font-size: 1.9rem;
-    line-height: 2rem;
-    padding-top: 10px;
-  }
-  .title a .highlight {
-    padding: 0.1rem 0.3rem;
-  }
-  .blognail, .blognail1, .blognail2, .blognail3 {
-    width: 300px;
-    height: 300px;
-  }
-  .blognail .title p, .blognail1 .title p, .blognail2 .title p, .blognail3 .title p {
-    font-size: 1.28rem;
-    padding-left: 4px;
-  }
-  .blognail .title a, .blognail1 .title a, .blognail2 .title a, .blognail3 .title a {
-    font-size: 1.9rem;
-    line-height: 2rem;
-    padding-top: 10px;
-  }
-  .blognail .title a .highlight, .blognail1 .title a .highlight, .blognail2 .title a .highlight, .blognail3 .title a .highlight {
-    padding: 0.1rem 0.3rem;
-  }
-  .about-caption {
-    padding: 15px 30px 5px;
-  }
-  .about-caption p {
-    font-size: 1.7rem;
-  }
-  .about-caption h2 {
     border-bottom-width: 4px;
     border-bottom-style: solid;
     border-color: #568fbb;
-  }
+}
+
+.featured {
+    font-size: 1.9rem;
+    padding-top: 30px;
+}
+
+.cred {
+    background-color: #ddd;
+    padding: 12px;
+}
+
+.padded {
+    padding-top: 10px;
+}
+
+.padded-lg {
+    padding-top: 100px;
+    color: #555;
+}
+
+#blogs {
+    padding-bottom: 60px;
+}
+
+#blogs h2 {
+    padding: 30px 0;
+}
+
+#blogs h3 {
+    color: #568fbb;
+}
+
+.prod-hidden {
+    display: none;
+}
+
+.products {
+    padding-bottom: 100px;
+}
+
+.products h2 {
+    padding: 30px 0;
+}
+
+.products h3 {
+    color: #568fbb;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+}
+
+.image img {
+    position: absolute;
+    min-height: 260px;
+    width: 100%;
+}
+
+.prod-parent {
+  min-height: 300px;
+}
+.prodnail, .prodnail1, .prodnail2, .prodnail3, .prodnail4 {
+    width: 270px;
+    height: 270px;
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blognail, .blognail1, .blognail2, .blognail3 {
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.prodnail-hidden {
+    background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.prodnail1 {
+    background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/advisor.jpg") left top no-repeat;
+    background-size: cover;
+}
+
+.prodnail2 {
+    background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/business.jpg") left top no-repeat;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/business.jpg") left top no-repeat;
+    background-size: cover;
+}
+
+.prodnail3 {
+    background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/uncover.jpg") left top no-repeat;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/uncover.jpg") left top no-repeat;
+    background-size: cover;
+}
+
+.prodnail4 {
+    background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/culture.jpg") left top no-repeat;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/culture.jpg") left top no-repeat;
+    background-size: cover;
+}
+
+.blognail1 {
+    background: -webkit-linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/book.jpg") center top no-repeat;
+    background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)), url("../../../wp-content/uploads/2017/02/book.jpg") center top no-repeat;
+    background-size: cover;
+}
+
+#target {
+    /* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
+    -ms-word-break: break-all;
+    word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+#target span {
+    /* Warning: Needed for oldIE support, but words are broken up letter-by-letter */
+    -ms-word-break: normal;
+    word-break: normal;
+    /* Non standard for webkit */
+    word-break: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+.title {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.title p {
+    color: white;
+    font-size: 1.7rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: 400;
+}
+
+.blognail .title, .blognail1 .title, .blognail2 .title, .blognail3 .title {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.blognail .title p, .blognail1 .title p, .blognail2 .title p, .blognail3 .title p {
+    color: white;
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: 400;
+}
+
+.title a {
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding: 20px 0px 0 0px;
+    font-weight: 700;
+}
+
+.title a .highlight {
+    display: inline;
+    color: white;
+    padding: 0.5rem 0.6rem;
+    -webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: -webkit-linear-gradient(left, #568fbb, #568fbb 50%, transparent 50%, transparent);
+    background-image: linear-gradient(to right, #568fbb, #568fbb 50%, transparent 50%, transparent);
+    background-position: 90% 0;
+    background-size: 270% 100%;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+.title a .highlight:hover {
+    color: white;
+    background-position: 0 0;
+}
+
+.product {
+    height: 600px;
+}
+
+.blognail, .blognail1, .blognail2, .blognail3 {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dark {
+    background-color: #f2f2f2;
+}
+
+.master-title {
+    font-size: 60px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-color: #568fbb;
+}
+
+#shrink {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../wp-content/uploads/2017/02/prod-img.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../wp-content/uploads/2017/02/prod-img.jpg");
+    background-position: center top no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+}
+
+footer {
+    min-height: 200px;
+    position: static;
+    bottom: 0;
+    background-color: #282828;
+    padding: 16px 0;
+    color: #bbb;
+    clear: both;
+}
+
+.horizontal-mailchimp .clear, .horizontal-mailchimp .mc-field-group {
+    display: inline-block;
+    max-height: 80px;
+    max-width: 1150px;
+}
+
+.clear {
+    margin-bottom: 14px;
+}
+
+.horizontal-mailchimp label {
+    display: none;
+    height: 0;
+    text-indent: -9999px;
+    height: 20px;
+}
+
+.horizontal-mailchimp {
+    background: #568fbb;
+    margin: 0 auto;
+    min-height: 70px;
+    padding: 1px 20px 6px;
+    text-align: center;
+    border-top: 2px rgba(255, 255, 255, 0.5) solid;
+    border-bottom: 2px rgba(255, 255, 255, 0.5) solid;
+}
+
+.EMAIL, .NAME {
+    min-width: 300px;
+    min-height: 34px;
+    margin: 14px 5px;
+    padding: 0 5px;
+}
+
+.blog-main {
+    padding: 60px 200px;
+}
+
+.blog-main p {
+    color: #222;
+}
+
+.vid {
+    width: 640px;
+    height: 400px;
+}
+
+.blog-title {
+    color: #333;
+    font-size: 1.8em;
+}
+
+.player {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+.player p {
+    padding: 5px;
+}
+
+.player img {
+    width: 100%;
+}
+
+audio {
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
+
+/* =Index pagination
+----------------------------------------------- */
+
+/* The containing box with a nice white background */
+.paging-navigation {
+	font-family: sans-serif;
+	padding: 1em;
+}
+
+/* Remove bullets and list indentation */
+.paging-navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Make the list items appear horizontally */
+.paging-navigation li {
+	display: inline;
+}
+
+/* Give each link and the current item some padding to make them easy to click */
+a.page-numbers,
+span.page-numbers {
+	padding: .3em .7em;
+	color: #333;
+	color: hsl(0, 0%, 20%);
+}
+
+/* Link hover state */
+a:hover.page-numbers {
+	color: #000;
+	color: hsl(0, 0%, 0%);
+}
+
+/* Current page bold and dark */
+.paging-navigation .current {
+	font-weight: bold;
+	color: #000;
+	color: hsl(0, 0%, 0%);
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    .prodnail, .prodnail1, .prodnail2, .prodnail3, .prodnail4 {
+        width: 220px;
+        height: 220px;
+    }
+    .title p {
+        font-size: 1.4rem;
+        padding-left: 4px;
+    }
+    .title a {
+        font-size: 1.9rem;
+        line-height: 2rem;
+        padding-top: 10px;
+    }
+    .title a .highlight {
+        padding: 0.1rem 0.3rem;
+    }
+    .blognail, .blognail1, .blognail2, .blognail3 {
+        width: 300px;
+        height: 300px;
+    }
+    .blognail .title p, .blognail1 .title p, .blognail2 .title p, .blognail3 .title p {
+        font-size: 1.28rem;
+        padding-left: 4px;
+    }
+    .blognail .title a, .blognail1 .title a, .blognail2 .title a, .blognail3 .title a {
+        font-size: 1.9rem;
+        line-height: 2rem;
+        padding-top: 10px;
+    }
+    .blognail .title a .highlight, .blognail1 .title a .highlight, .blognail2 .title a .highlight, .blognail3 .title a .highlight {
+        padding: 0.1rem 0.3rem;
+    }
+    .about-caption {
+        padding: 15px 30px 5px;
+    }
+    .about-caption p {
+        font-size: 1.7rem;
+    }
+    .about-caption h2 {
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+        border-color: #568fbb;
+    }
 }
 
 @media only screen and (max-width: 992px) {
-  .about-container {
-    margin-bottom: 50px;
-  }
-  .prodnail, .prodnail1, .prodnail2, .prodnail3, .prodnail4 {
-    width: 320px;
-    height: 320px;
-  }
-  .title p {
-    font-size: 1.8rem;
-  }
-  .title a {
-    font-size: 2.8rem;
-    line-height: 3.1rem;
-  }
-  .title a .highlight {
-    padding: 0.1rem 0.4rem;
-  }
-  .blognail, .blognail1, .blognail2, .blognail3 {
-    width: 400px;
-    height: 400px;
-  }
-  .blognail .title p, .blognail1 .title p, .blognail2 .title p, .blognail3 .title p {
-    font-size: 1.8rem;
-  }
-  .blognail .title a, .blognail1 .title a, .blognail2 .title a, .blognail3 .title a {
-    font-size: 2.8rem;
-    line-height: 3.1rem;
-  }
-  .blognail .title a .highlight, .blognail1 .title a .highlight, .blognail2 .title a .highlight, .blognail3 .title a .highlight {
-    padding: 0.1rem 0.4rem;
-  }
-  .cred-img {
-    width: 110px;
-  }
-  .blog-main {
-    padding: 100px 80px;
-  }
-  .vid {
-    width: 500px;
-    height: 320px;
-  }
-  .hero-pages {
-    max-width: 1300px;
-    padding: 40px 20px 25px;
-  }
+    .about-container {
+        margin-bottom: 50px;
+    }
+    .prodnail, .prodnail1, .prodnail2, .prodnail3, .prodnail4 {
+        width: 320px;
+        height: 320px;
+    }
+    .title p {
+        font-size: 1.8rem;
+    }
+    .title a {
+        font-size: 2.8rem;
+        line-height: 3.1rem;
+    }
+    .title a .highlight {
+        padding: 0.1rem 0.4rem;
+    }
+    .blognail, .blognail1, .blognail2, .blognail3 {
+        width: 400px;
+        height: 400px;
+    }
+    .blognail .title p, .blognail1 .title p, .blognail2 .title p, .blognail3 .title p {
+        font-size: 1.8rem;
+    }
+    .blognail .title a, .blognail1 .title a, .blognail2 .title a, .blognail3 .title a {
+        font-size: 2.8rem;
+        line-height: 3.1rem;
+    }
+    .blognail .title a .highlight, .blognail1 .title a .highlight, .blognail2 .title a .highlight, .blognail3 .title a .highlight {
+        padding: 0.1rem 0.4rem;
+    }
+    .cred-img {
+        width: 110px;
+    }
+    .blog-main {
+        padding: 100px 80px;
+    }
+    .vid {
+        width: 500px;
+        height: 320px;
+    }
+    .hero-pages {
+        max-width: 1300px;
+        padding: 40px 20px 25px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+  nav {
+      display: none;
+  }
+
   .blog-main {
-    padding: 100px 50px;
-  }
-  .vid {
-    width: 360px;
-    height: 200px;
-  }
-  .logo {
-    width: 160px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #hero {
-    padding: 150px 20px;
-  }
-  h1 {
-    font-size: 2.2em;
-  }
-  h3 {
-    font-size: 1.2em;
-  }
-  .sub-title {
-    padding: 6px 0 18px;
-    margin: 0;
-    font-weight: 400;
-  }
-  .horizontal-mailchimp .clear,
-  .horizontal-mailchimp .mc-field-group,
-  .horizontal-mailchimp input {
-    display: inline-block;
-  }
-  .horizontal-mailchimp .mc-field-group {
-    margin-bottom: 5px;
-  }
-  #mc_embed_signup .mc-field-group {
-    clear: none !important;
-    width: auto !important;
-  }
-  .padded-lg {
-    font-size: 14px;
-  }
-  .EMAIL,
-  .NAME {
-    min-width: 200px;
-    min-height: 34px;
-    margin: 0 5px;
-    padding: 0 5px;
-  }
-  .about-container {
-    height: auto;
-    padding-top: 20px;
-    background-color: #636363;
-  }
-  .tonje-img {
-    display: block;
-    background: url("../../../wp-content/uploads/2017/02/tonje3.jpg") center top no-repeat;
-    background-size: contain;
-    height: 350px;
-    width: auto;
-    padding: 0;
-  }
-  .blog-main {
-    padding-top: 30px;
-  }
-  .prod-visible {
-    display: none;
-  }
-  .prod-hidden {
-    display: block;
-  }
-  .blognail, .blognail1, .blognail2, .blognail3 {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .master-title {
-    font-size: 3.2em;
-  }
+        padding: 100px 50px;
+    }
+    .vid {
+        width: 360px;
+        height: 200px;
+    }
+    .logo {
+        width: 160px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #hero {
+        padding: 150px 20px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    .sub-title {
+        padding: 6px 0 18px;
+        margin: 0;
+        font-weight: 400;
+    }
+    .horizontal-mailchimp .clear, .horizontal-mailchimp .mc-field-group, .horizontal-mailchimp input {
+        display: inline-block;
+    }
+    .horizontal-mailchimp .mc-field-group {
+        margin-bottom: 5px;
+    }
+    #mc_embed_signup .mc-field-group {
+        clear: none !important;
+        width: auto !important;
+    }
+    .padded-lg {
+        font-size: 14px;
+    }
+    .EMAIL, .NAME {
+        min-width: 200px;
+        min-height: 34px;
+        margin: 0 5px;
+        padding: 0 5px;
+    }
+    .about-container {
+        height: auto;
+        padding-top: 20px;
+        background-color: #636363;
+    }
+    .tonje-img {
+        display: block;
+        background: url("../../../wp-content/uploads/2017/02/tonje3.jpg") center top no-repeat;
+        background-size: contain;
+        height: 350px;
+        width: auto;
+        padding: 0;
+    }
+    .blog-main {
+        padding-top: 30px;
+    }
+    .prod-visible {
+        display: none;
+    }
+    .prod-hidden {
+        display: block;
+    }
+    .blognail, .blognail1, .blognail2, .blognail3 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .master-title {
+        font-size: 3.2em;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-  .blog-main {
-    padding: 30px;
-  }
-  .vid {
-    width: 280px;
-    height: 160px;
-  }
-  nav {
-    display: none;
-  }
-  h1 {
-    padding: 0;
-    margin: 0;
-  }
-  #hero {
-    padding-top: 100px;
-  }
-  #hero h1 {
-    padding: 40px 20px;
-    margin: 0;
-  }
-  #hero p {
-    font-size: 1.1em;
-  }
-  .horizontal-mailchimp .clear,
-  .horizontal-mailchimp .mc-field-group {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .clear {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-  }
-  .featured {
-    font-size: 1.5rem;
-    padding-top: 10px;
-  }
-  .cred-img {
-    width: 80px;
-  }
-  .cred {
-    padding: 8px;
-  }
-  .tonje-img {
-    display: none;
-  }
-  .EMAIL,
-  .NAME {
-    min-width: 300px;
-    min-height: 34px;
-    margin: 0 0px;
-    padding: 0 0px;
-  }
-  .master-title {
-    font-size: 2.7em;
-  }
-  #blogs,
-  .container-fluid,
-  .products {
-    padding: 0;
-    margin: 0;
-  }
-  .row {
-    margin: 0;
-    padding: 0;
-  }
+    .blog-main {
+        padding: 30px;
+    }
+    .vid {
+        width: 280px;
+        height: 160px;
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+    #hero {
+        padding-top: 100px;
+    }
+    #hero h1 {
+        padding: 40px 20px;
+        margin: 0;
+    }
+    #hero p {
+        font-size: 1.1em;
+    }
+    .horizontal-mailchimp .clear, .horizontal-mailchimp .mc-field-group {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .clear {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
+    .featured {
+        font-size: 1.5rem;
+        padding-top: 10px;
+    }
+    .cred-img {
+        width: 80px;
+    }
+    .cred {
+        padding: 8px;
+    }
+    .tonje-img {
+        display: none;
+    }
+    .EMAIL, .NAME {
+        min-width: 300px;
+        min-height: 34px;
+        margin: 0 0px;
+        padding: 0 0px;
+    }
+    .master-title {
+        font-size: 2.7em;
+    }
+    #blogs, .container-fluid, .products {
+        padding: 0;
+        margin: 0;
+    }
+    .row {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 400px) {
-  #hero {
-    padding: 70px 20px;
-  }
-  h1 {
-    font-size: 1.4em;
-  }
-  h3 {
-    font-size: 1em;
-  }
-  .btn-lg {
-    height: 40px;
-    width: 105px;
-    padding: 6px;
-  }
-  .cred-img {
-    width: 70px;
-  }
-  .master-title {
-    font-size: 2.2em;
-  }
-  .blog-main {
-    padding: 20px;
-  }
-  .EMAIL,
-  .NAME {
-    min-width: 220px;
-    min-height: 34px;
-    margin: 0 5px;
-    padding: 0 5px;
-  }
+    #hero {
+        padding: 70px 20px;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    .btn-lg {
+        height: 40px;
+        width: 105px;
+        padding: 6px;
+    }
+    .cred-img {
+        width: 70px;
+    }
+    .master-title {
+        font-size: 2.2em;
+    }
+    .blog-main {
+        padding: 20px;
+    }
+    .EMAIL, .NAME {
+        min-width: 220px;
+        min-height: 34px;
+        margin: 0 5px;
+        padding: 0 5px;
+    }
 }

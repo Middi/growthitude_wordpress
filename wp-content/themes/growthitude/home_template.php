@@ -75,7 +75,7 @@
                 <div class="prodnail-hidden">
 
                   <div class="title" id="target">
-                      <a href="products.html"><span class="highlight">View Our Products</span></a>
+                      <a href="http://localhost:8888/growthitude_wordpress/products/"><span class="highlight">View Our Products</span></a>
                         <p>Crush this year with our workshops, webinars or books.</p>
 
 
