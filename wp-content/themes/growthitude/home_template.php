@@ -1,5 +1,8 @@
 <?php /* Template Name: home */ ?>
 
+
+
+
 <?php get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -8,6 +11,7 @@
 <?php endif; ?>
 
 <?php the_content(); ?>
+
 
 
   <div id="hero">
@@ -221,7 +225,17 @@ if ( $id = get_post_thumbnail_id() ) {
 
 
       </div>
+
+      <a href="/growthitude-wordpress/blogs" role="button" class="btn btn-success btn-lg">More Blogs</a>
   </div>
+
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+  	<!-- END FORM SECTION -->
 
 
 <?php get_footer(); ?>

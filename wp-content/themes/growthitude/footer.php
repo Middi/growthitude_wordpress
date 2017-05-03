@@ -27,6 +27,28 @@
         </div>
     </footer>
 
+    <div class="float-sm"> <a href="http://www.facebook.com/growthitude" target="_blank" class="sm-link">
+  <div class="fl-fl float-fb">
+  <i class="fa fa-facebook"></i>
+  </div></a>
+  <a href="https://twitter.com/growthitude" target="_blank" class="sm-link">
+  <div class="fl-fl float-tw">
+    <i class="fa fa-twitter"></i>
+  </div></a>
+    <a href="https://plus.google.com/113706126361531165081" target="_blank" class="sm-link">
+  <div class="fl-fl float-gp">
+    <i class="fa fa-google-plus"></i>
+  </div></a>
+    <a href="https://www.youtube.com/channel/UCb87uU5nt0kmLHfTvY3sRaQ" target="_blank" class="sm-link">
+  <div class="fl-fl float-yt">
+    <i class="fa fa-youtube"></i>
+  </div></a>
+    <a href="mailto:post@growthitude.com" target="_blank" class="sm-link">
+  <div class="fl-fl float-email">
+    <i class="fa fa-envelope"></i>
+  </div></a>
+</div>
+
 
     <!-- DEFERRED STYLES -->
 
